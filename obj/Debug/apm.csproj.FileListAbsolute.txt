@@ -1,0 +1,9 @@
+C:\Users\egoes\source\repos\apm\bin\Debug\apm.exe.config
+C:\Users\egoes\source\repos\apm\bin\Debug\apm.exe
+C:\Users\egoes\source\repos\apm\bin\Debug\apm.pdb
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.csprojAssemblyReference.cache
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.Properties.Resources.resources
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.csproj.GenerateResource.cache
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.csproj.CoreCompileInputs.cache
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.exe
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.pdb
