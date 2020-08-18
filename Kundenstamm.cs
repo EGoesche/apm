@@ -8,23 +8,46 @@ using System.Threading.Tasks;
 
 namespace apm
 {
+    /// <summary>
+    /// Der Kundenstamm ist die Containerklasse, welche die Kunden der 
+    /// verschiedenen Fluggesellschaften beinhaltet.
+    /// </summary>
     class Kundenstamm : IContainer
     {
         private ArrayList _kundenList;
         public string Fluggesellschaft { get; set; }
 
+
+        /// <summary>
+        /// Konstruktor Kundenstamm.
+        /// </summary>
+        /// <param name="fluggesellschaft">Name der Fluggesellschaft, welche diese Kundenstamm besitzt.</param>
         public Kundenstamm(string fluggesellschaft)
         {
             _kundenList = new ArrayList();
             this.Fluggesellschaft = fluggesellschaft;
         }
 
+
+        /// <summary>
+        /// Kunde zu einem Kundenstamm hinzufuegen.
+        /// Der Kunde wird ohne Erstellung eines KundennummerSite Objektes hinzugefuegt.
+        /// Diese Methode ueberprueft keine Duplikate und sollte daher nicht verwendet
+        /// werden.
+        /// </summary>
+        /// <param name="kunde">Kundenobjekt, welches zum Kundenstamm hinzugefuegt werden soll.</param>
         public virtual void Add(IComponent kunde)
         {
-            // Ein Kunde wird ohne Erstellung eines KundennummerSite Objektes hinzugefuegt.
             _kundenList.Add(kunde);
         }
 
+
+        /// <summary>
+        /// Kunde zu einem Kundenstamm hinzufuegen.
+        /// Der Kunde wird anhand des KundennummerSite Objektes hinzugefuegt.
+        /// </summary>
+        /// <param name="kunde">Kundenobjekt, welches zum Kundenstamm hinzugefuegt werden soll.</param>
+        /// <param name="kundennummer">Kundennummer, welche den Kunden eindeutig identifiziert.</param>
         public virtual void Add(IComponent kunde, string kundennummer)
         {
             for (int i = 0; i < _kundenList.Count; ++i)
@@ -43,6 +66,11 @@ namespace apm
             _kundenList.Add(kunde);
         }
 
+
+        /// <summary>
+        /// Entfernt einen Kunden aus der Fluggesellschaft
+        /// </summary>
+        /// <param name="kunde">Kunde, welcher entfernt werden soll.</param>
         public virtual void Remove(IComponent kunde)
         {
             for (int i = 0; i < _kundenList.Count; ++i)
@@ -55,6 +83,10 @@ namespace apm
             }
         }
 
+
+        /// <summary>
+        /// Liefert eine ComponentCollection, welche die einzelnen Kunden beinhaltet.
+        /// </summary>
         public ComponentCollection Components
         {
             get
@@ -65,6 +97,10 @@ namespace apm
             }
         }
 
+
+        /// <summary>
+        /// Loest den Kundenstamm und die darin befindlichen Kunden auf.
+        /// </summary>
         public virtual void Dispose()
         {
             for (int i = 0; i < _kundenList.Count; ++i)

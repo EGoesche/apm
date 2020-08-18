@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace apm
 {
+    /// <summary>
+    /// Site Interface wird benutzt, um Kunden an Kundenstaemme zu binden
+    /// und eine Kommunikation zwischen beiden zu ermoeglichen.
+    /// </summary>
     class KundennummerSite : ISite
     {
         private IComponent _curComponent;
@@ -14,6 +18,12 @@ namespace apm
         private bool _bDesignMode;
         private string _KundennummerName;
 
+
+        /// <summary>
+        /// Konstruktor KundennummerSite
+        /// </summary>
+        /// <param name="actvCntr"></param>
+        /// <param name="prntCmpnt"></param>
         public KundennummerSite(IContainer actvCntr, IComponent prntCmpnt)
         {
             _curComponent = prntCmpnt;
@@ -22,7 +32,10 @@ namespace apm
             _KundennummerName = null;
         }
 
-        //Support the ISite interface.
+
+        /// <summary>
+        /// Liefert die zugehoriege Komponente der KundennummerSite.
+        /// </summary>
         public virtual IComponent Component
         {
             get
@@ -31,6 +44,10 @@ namespace apm
             }
         }
 
+
+        /// <summary>
+        /// Liefert den zugehoerigen Container der KundennummerSite.
+        /// </summary>
         public virtual IContainer Container
         {
             get
@@ -39,6 +56,10 @@ namespace apm
             }
         }
 
+        
+        /// <summary>
+        /// Liefert den DesignMode der Site.
+        /// </summary>
         public virtual bool DesignMode
         {
             get
@@ -47,6 +68,11 @@ namespace apm
             }
         }
 
+
+        /// <summary>
+        /// Liefert bzw. setzt den Namen der Site.
+        /// Der Name (Kundennummer) wird stets als String behandelt.
+        /// </summary>
         public virtual string Name
         {
             get
@@ -60,10 +86,15 @@ namespace apm
             }
         }
 
-        // Support the IServiceProvider interface
+
+        /// <summary>
+        /// Liefert das Service Objekt der Site.
+        /// Service Objekte werden in diesem Programm nicht verwendet.
+        /// </summary>
+        /// <param name="serviceType"></param>
+        /// <returns></returns>
         public virtual object GetService(Type serviceType)
         {
-            // This programm does not use any service object
             return null;
         }
     }

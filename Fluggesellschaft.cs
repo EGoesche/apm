@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace apm
 {
+    /// <summary>
+    /// Fluggesellschaften.
+    /// </summary>
     class Fluggesellschaft
     {
 
