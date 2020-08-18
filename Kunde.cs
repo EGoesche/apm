@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace apm
 {
-    class Kunde : Person
+    class Kunde : Person, IComponent
     {
+        private ISite _curKundennummerSite;
+        public event EventHandler Disposed;
         public int Kundenummer { get; set; }
         public string Status { get; set; }
 
@@ -30,6 +33,41 @@ namespace apm
             Zip = zip;
             Wohnort = wohnort;
             Land = land;
+        }
+
+        public virtual void Dispose()
+        {
+            if (Disposed != null)
+            {
+                Disposed(this, EventArgs.Empty);
+            }
+        }
+
+        public virtual ISite Site
+        {
+            get
+            {
+                return _curKundennummerSite;
+            }
+            set
+            {
+                _curKundennummerSite = value;
+            }
+        }
+
+        public override bool Equals(object cmp)
+        {
+            Kunde cmpObj = (Kunde)cmp;
+            if (this.Kundenummer.Equals(cmpObj.Kundenummer) && this.Status.Equals(cmpObj.Status) && 
+                this.Vorname.Equals(cmpObj.Vorname) && this.Nachname.Equals(cmpObj.Nachname))
+                return true;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
