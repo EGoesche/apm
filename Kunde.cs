@@ -17,6 +17,7 @@ namespace apm
         public event EventHandler Disposed;
         public int Kundenummer { get; set; }
         public string Status { get; set; }
+        public Sitzplatz sitz { get; set; }
 
 
         /// <summary>
@@ -59,7 +60,8 @@ namespace apm
             Land = land;
         }
 
-        
+
+
         /// <summary>
         /// Entfernt ein Kundenobjekt.
         /// </summary>
