@@ -8,33 +8,34 @@ using System.Threading.Tasks;
 namespace apm
 {
     /// <summary>
-    /// Site Interface wird benutzt, um Kunden an Kundenstaemme zu binden
-    /// und eine Kommunikation zwischen beiden zu ermoeglichen.
+    /// Site Interface wird benutzt, um Sitzplaetze an Passagierflugzeuge 
+    /// zu binden und eine Kommunikation zwischen beiden zu ermoeglichen.
     /// </summary>
-    class KundennummerSite : ISite
+    class SitznummerSite : ISite
     {
         private IComponent _curComponent;
         private IContainer _curContainer;
         private bool _bDesignMode;
-        private string _kundennummerName;
+        private string _sitznummerName;
+
 
 
         /// <summary>
-        /// Konstruktor KundennummerSite
+        /// Konstruktor SitznummerSite
         /// </summary>
         /// <param name="actvCntr"></param>
         /// <param name="prntCmpnt"></param>
-        public KundennummerSite(IContainer actvCntr, IComponent prntCmpnt)
+        public SitznummerSite(IContainer actvCntr, IComponent prntCmpnt)
         {
             _curComponent = prntCmpnt;
             _curContainer = actvCntr;
             _bDesignMode = false;
-            _kundennummerName = null;
+            _sitznummerName = null;
         }
 
 
         /// <summary>
-        /// Liefert die zugehoriege Komponente der KundennummerSite.
+        /// Liefert die zugehoriege Komponente der SitznummerSite.
         /// </summary>
         public virtual IComponent Component
         {
@@ -46,7 +47,7 @@ namespace apm
 
 
         /// <summary>
-        /// Liefert den zugehoerigen Container der KundennummerSite.
+        /// Liefert den zugehoerigen Container der SitznnummerSite.
         /// </summary>
         public virtual IContainer Container
         {
@@ -56,7 +57,7 @@ namespace apm
             }
         }
 
-        
+
         /// <summary>
         /// Liefert den DesignMode der Site.
         /// </summary>
@@ -71,18 +72,18 @@ namespace apm
 
         /// <summary>
         /// Liefert bzw. setzt den Namen der Site.
-        /// Der Name (Kundennummer) wird stets als String behandelt.
+        /// Der Name (Sitznummer) wird stets als String behandelt.
         /// </summary>
         public virtual string Name
         {
             get
             {
-                return _kundennummerName;
+                return _sitznummerName;
             }
 
             set
             {
-                _kundennummerName = value;
+                _sitznummerName = value;
             }
         }
 

@@ -59,5 +59,15 @@ namespace apm
             this.StartZeitpunkt = startZeitpunkt;
             this.LandZeitpunkt = landeZeitpunkt;
         }
+
+
+        /// <summary>
+        /// Liefert die Flugdauer eines Fluges.
+        /// </summary>
+        /// <returns>Zeitspanne des Fluges im Format DAYS.HOURS:MINUTES:SECOUNDS</returns>
+        public TimeSpan GetFlugdauer()
+        {
+            return LandZeitpunkt.Subtract(StartZeitpunkt);
+        }
     }
 }
