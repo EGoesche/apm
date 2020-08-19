@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace apm
 {
-    public partial class Startfenster : Form
+    public partial class StartfensterMenu : UserControl
     {
-        public Startfenster()
+        public StartfensterMenu()
         {
             InitializeComponent();
         }
-
     }
 }
