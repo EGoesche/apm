@@ -15,7 +15,17 @@ namespace apm
         public Startfenster()
         {
             InitializeComponent();
+            startfensterMenu.BringToFront();
         }
 
+        private void startfensterMenu_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void wechsle()
+        {
+            passagierinfoSuche.BringToFront();
+        }
     }
 }

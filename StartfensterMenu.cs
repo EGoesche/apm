@@ -17,14 +17,11 @@ namespace apm
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_informationenAbrufen_Click(object sender, EventArgs e)
         {
-
+            PassagierinfoSuche passagierinfo = new PassagierinfoSuche();
+            passagierinfo.BringToFront();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

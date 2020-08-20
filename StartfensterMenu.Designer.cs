@@ -169,6 +169,7 @@
             this.btn_informationenAbrufen.TabIndex = 3;
             this.btn_informationenAbrufen.Text = "Informationen abrufen";
             this.btn_informationenAbrufen.UseVisualStyleBackColor = false;
+            this.btn_informationenAbrufen.Click += new System.EventHandler(this.btn_informationenAbrufen_Click);
             // 
             // pn_kunden
             // 
@@ -239,7 +240,6 @@
             this.btn_hinzufuegen.TabIndex = 0;
             this.btn_hinzufuegen.Text = "Hinzufügen";
             this.btn_hinzufuegen.UseVisualStyleBackColor = false;
-            this.btn_hinzufuegen.Click += new System.EventHandler(this.button1_Click);
             // 
             // lb_kunden
             // 
@@ -280,7 +280,6 @@
             this.lb_checkIn.Size = new System.Drawing.Size(107, 25);
             this.lb_checkIn.TabIndex = 5;
             this.lb_checkIn.Text = "Check-In";
-            this.lb_checkIn.Click += new System.EventHandler(this.label3_Click);
             // 
             // StartfensterMenu
             // 

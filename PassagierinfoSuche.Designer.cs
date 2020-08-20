@@ -220,6 +220,7 @@
             this.btn_zurueck.TabIndex = 1;
             this.btn_zurueck.Text = "Zurück";
             this.btn_zurueck.UseVisualStyleBackColor = false;
+            this.btn_zurueck.Click += new System.EventHandler(this.btn_zurueck_Click);
             // 
             // lb_suche
             // 

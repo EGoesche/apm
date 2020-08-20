@@ -33,6 +33,7 @@
             this.lbtn_sprache = new System.Windows.Forms.LinkLabel();
             this.lb_home = new System.Windows.Forms.Label();
             this.startfensterMenu = new apm.StartfensterMenu();
+            this.passagierinfoSuche = new apm.PassagierinfoSuche();
             this.pn_header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,12 +102,21 @@
             this.startfensterMenu.Name = "startfensterMenu";
             this.startfensterMenu.Size = new System.Drawing.Size(1000, 470);
             this.startfensterMenu.TabIndex = 1;
+            this.startfensterMenu.Load += new System.EventHandler(this.startfensterMenu_Load);
+            // 
+            // passagierinfoSuche
+            // 
+            this.passagierinfoSuche.Location = new System.Drawing.Point(0, 77);
+            this.passagierinfoSuche.Name = "passagierinfoSuche";
+            this.passagierinfoSuche.Size = new System.Drawing.Size(1000, 470);
+            this.passagierinfoSuche.TabIndex = 2;
             // 
             // Startfenster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 559);
+            this.Controls.Add(this.passagierinfoSuche);
             this.Controls.Add(this.startfensterMenu);
             this.Controls.Add(this.pn_header);
             this.MinimumSize = new System.Drawing.Size(1015, 598);
@@ -125,6 +135,7 @@
         private System.Windows.Forms.Label lb_home;
         private System.Windows.Forms.LinkLabel lbtn_anmelden;
         private StartfensterMenu startfensterMenu;
+        private PassagierinfoSuche passagierinfoSuche;
     }
 }
 
