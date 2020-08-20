@@ -49,6 +49,12 @@
     <Compile Include="Flug.cs" />
     <Compile Include="Fluggesellschaft.cs" />
     <Compile Include="Flugzeug.cs" />
+    <Compile Include="PassagierinfoAnzeige.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PassagierinfoAnzeige.Designer.cs">
+      <DependentUpon>PassagierinfoAnzeige.cs</DependentUpon>
+    </Compile>
     <Compile Include="PassagierinfoSuche.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="StartfensterMenu.Designer.cs">
       <DependentUpon>StartfensterMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PassagierinfoAnzeige.resx">
+      <DependentUpon>PassagierinfoAnzeige.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PassagierinfoSuche.resx">
       <DependentUpon>PassagierinfoSuche.cs</DependentUpon>
     </EmbeddedResource>

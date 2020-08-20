@@ -10,3 +10,4 @@ C:\Users\egoes\source\repos\apm\obj\Debug\apm.Startfenster.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.StartfensterMenu.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.PassagierinfoSuche.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.csprojAssemblyReference.cache
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.PassagierinfoAnzeige.resources
