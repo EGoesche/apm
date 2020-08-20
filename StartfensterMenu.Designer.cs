@@ -28,230 +28,277 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pn_checkIn = new System.Windows.Forms.Panel();
+            this.pn_checkInScan = new System.Windows.Forms.Panel();
+            this.tb_scan = new System.Windows.Forms.TextBox();
+            this.lb_scanne = new System.Windows.Forms.Label();
+            this.btn_startManuell = new System.Windows.Forms.Button();
+            this.pn_passagiere = new System.Windows.Forms.Panel();
+            this.btn_umBuchen = new System.Windows.Forms.Button();
+            this.btn_informationenAbrufen = new System.Windows.Forms.Button();
+            this.pn_kunden = new System.Windows.Forms.Panel();
+            this.btn_entfernen = new System.Windows.Forms.Button();
+            this.btn_bearbeiten = new System.Windows.Forms.Button();
+            this.btn_hinzufuegen = new System.Windows.Forms.Button();
+            this.lb_kunden = new System.Windows.Forms.Label();
+            this.lb_passagiere = new System.Windows.Forms.Label();
+            this.lb_checkIn = new System.Windows.Forms.Label();
+            this.pn_checkIn.SuspendLayout();
+            this.pn_checkInScan.SuspendLayout();
+            this.pn_passagiere.SuspendLayout();
+            this.pn_kunden.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pn_checkIn
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Location = new System.Drawing.Point(510, 51);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 279);
-            this.panel1.TabIndex = 0;
+            this.pn_checkIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_checkIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.pn_checkIn.Controls.Add(this.pn_checkInScan);
+            this.pn_checkIn.Controls.Add(this.btn_startManuell);
+            this.pn_checkIn.Location = new System.Drawing.Point(690, 70);
+            this.pn_checkIn.Margin = new System.Windows.Forms.Padding(20);
+            this.pn_checkIn.Name = "pn_checkIn";
+            this.pn_checkIn.Size = new System.Drawing.Size(290, 380);
+            this.pn_checkIn.TabIndex = 0;
             // 
-            // panel2
+            // pn_checkInScan
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Location = new System.Drawing.Point(273, 51);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 279);
-            this.panel2.TabIndex = 1;
+            this.pn_checkInScan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_checkInScan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.pn_checkInScan.Controls.Add(this.tb_scan);
+            this.pn_checkInScan.Controls.Add(this.lb_scanne);
+            this.pn_checkInScan.Location = new System.Drawing.Point(17, 150);
+            this.pn_checkInScan.Margin = new System.Windows.Forms.Padding(20);
+            this.pn_checkInScan.Name = "pn_checkInScan";
+            this.pn_checkInScan.Size = new System.Drawing.Size(253, 210);
+            this.pn_checkInScan.TabIndex = 6;
             // 
-            // panel3
+            // tb_scan
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(28, 51);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(205, 279);
-            this.panel3.TabIndex = 2;
+            this.tb_scan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_scan.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_scan.Location = new System.Drawing.Point(57, 123);
+            this.tb_scan.Name = "tb_scan";
+            this.tb_scan.Size = new System.Drawing.Size(156, 19);
+            this.tb_scan.TabIndex = 1;
             // 
-            // label1
+            // lb_scanne
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Kunden";
+            this.lb_scanne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_scanne.AutoSize = true;
+            this.lb_scanne.BackColor = System.Drawing.Color.Transparent;
+            this.lb_scanne.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_scanne.ForeColor = System.Drawing.Color.White;
+            this.lb_scanne.Location = new System.Drawing.Point(53, 49);
+            this.lb_scanne.Name = "lb_scanne";
+            this.lb_scanne.Size = new System.Drawing.Size(160, 38);
+            this.lb_scanne.TabIndex = 0;
+            this.lb_scanne.Text = "Scanne Ticket oder \r\nBordkarte";
+            this.lb_scanne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // btn_startManuell
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(331, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Passagiere";
+            this.btn_startManuell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.btn_startManuell.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_startManuell.FlatAppearance.BorderSize = 0;
+            this.btn_startManuell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_startManuell.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_startManuell.ForeColor = System.Drawing.Color.White;
+            this.btn_startManuell.Location = new System.Drawing.Point(17, 28);
+            this.btn_startManuell.Margin = new System.Windows.Forms.Padding(20);
+            this.btn_startManuell.Name = "btn_startManuell";
+            this.btn_startManuell.Size = new System.Drawing.Size(253, 87);
+            this.btn_startManuell.TabIndex = 5;
+            this.btn_startManuell.Text = "Start manuell";
+            this.btn_startManuell.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // pn_passagiere
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(578, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Check-In";
+            this.pn_passagiere.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_passagiere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.pn_passagiere.Controls.Add(this.btn_umBuchen);
+            this.pn_passagiere.Controls.Add(this.btn_informationenAbrufen);
+            this.pn_passagiere.Location = new System.Drawing.Point(352, 70);
+            this.pn_passagiere.Margin = new System.Windows.Forms.Padding(50);
+            this.pn_passagiere.Name = "pn_passagiere";
+            this.pn_passagiere.Size = new System.Drawing.Size(290, 380);
+            this.pn_passagiere.TabIndex = 1;
             // 
-            // button1
+            // btn_umBuchen
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(14, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 62);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Hinzufügen";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_umBuchen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_umBuchen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.btn_umBuchen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_umBuchen.FlatAppearance.BorderSize = 0;
+            this.btn_umBuchen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_umBuchen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_umBuchen.ForeColor = System.Drawing.Color.White;
+            this.btn_umBuchen.Location = new System.Drawing.Point(20, 150);
+            this.btn_umBuchen.Margin = new System.Windows.Forms.Padding(20);
+            this.btn_umBuchen.Name = "btn_umBuchen";
+            this.btn_umBuchen.Size = new System.Drawing.Size(253, 87);
+            this.btn_umBuchen.TabIndex = 4;
+            this.btn_umBuchen.Text = "(Um-)Buchen";
+            this.btn_umBuchen.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_informationenAbrufen
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(19, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 62);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Bearbeiten";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_informationenAbrufen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_informationenAbrufen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.btn_informationenAbrufen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_informationenAbrufen.FlatAppearance.BorderSize = 0;
+            this.btn_informationenAbrufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_informationenAbrufen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_informationenAbrufen.ForeColor = System.Drawing.Color.White;
+            this.btn_informationenAbrufen.Location = new System.Drawing.Point(20, 28);
+            this.btn_informationenAbrufen.Margin = new System.Windows.Forms.Padding(20);
+            this.btn_informationenAbrufen.Name = "btn_informationenAbrufen";
+            this.btn_informationenAbrufen.Size = new System.Drawing.Size(250, 87);
+            this.btn_informationenAbrufen.TabIndex = 3;
+            this.btn_informationenAbrufen.Text = "Informationen abrufen";
+            this.btn_informationenAbrufen.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // pn_kunden
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(19, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 62);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Entfernen";
-            this.button3.UseVisualStyleBackColor = false;
+            this.pn_kunden.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_kunden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.pn_kunden.Controls.Add(this.btn_entfernen);
+            this.pn_kunden.Controls.Add(this.btn_bearbeiten);
+            this.pn_kunden.Controls.Add(this.btn_hinzufuegen);
+            this.pn_kunden.Location = new System.Drawing.Point(20, 70);
+            this.pn_kunden.Margin = new System.Windows.Forms.Padding(20);
+            this.pn_kunden.Name = "pn_kunden";
+            this.pn_kunden.Size = new System.Drawing.Size(290, 380);
+            this.pn_kunden.TabIndex = 2;
             // 
-            // button4
+            // btn_entfernen
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(18, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(167, 62);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Informationen abrufen";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_entfernen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_entfernen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.btn_entfernen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_entfernen.FlatAppearance.BorderSize = 0;
+            this.btn_entfernen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_entfernen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_entfernen.ForeColor = System.Drawing.Color.White;
+            this.btn_entfernen.Location = new System.Drawing.Point(20, 273);
+            this.btn_entfernen.Margin = new System.Windows.Forms.Padding(20);
+            this.btn_entfernen.Name = "btn_entfernen";
+            this.btn_entfernen.Size = new System.Drawing.Size(250, 87);
+            this.btn_entfernen.TabIndex = 2;
+            this.btn_entfernen.Text = "Entfernen";
+            this.btn_entfernen.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_bearbeiten
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(19, 108);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 62);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "(Um-)Buchen";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_bearbeiten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_bearbeiten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.btn_bearbeiten.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_bearbeiten.FlatAppearance.BorderSize = 0;
+            this.btn_bearbeiten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_bearbeiten.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bearbeiten.ForeColor = System.Drawing.Color.White;
+            this.btn_bearbeiten.Location = new System.Drawing.Point(20, 150);
+            this.btn_bearbeiten.Margin = new System.Windows.Forms.Padding(20);
+            this.btn_bearbeiten.Name = "btn_bearbeiten";
+            this.btn_bearbeiten.Size = new System.Drawing.Size(250, 87);
+            this.btn_bearbeiten.TabIndex = 1;
+            this.btn_bearbeiten.Text = "Bearbeiten";
+            this.btn_bearbeiten.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btn_hinzufuegen
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(23, 13);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(167, 62);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Start manuell";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn_hinzufuegen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_hinzufuegen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.btn_hinzufuegen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_hinzufuegen.FlatAppearance.BorderSize = 0;
+            this.btn_hinzufuegen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_hinzufuegen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hinzufuegen.ForeColor = System.Drawing.Color.White;
+            this.btn_hinzufuegen.Location = new System.Drawing.Point(20, 28);
+            this.btn_hinzufuegen.Margin = new System.Windows.Forms.Padding(20);
+            this.btn_hinzufuegen.Name = "btn_hinzufuegen";
+            this.btn_hinzufuegen.Size = new System.Drawing.Size(250, 82);
+            this.btn_hinzufuegen.TabIndex = 0;
+            this.btn_hinzufuegen.Text = "Hinzufügen";
+            this.btn_hinzufuegen.UseVisualStyleBackColor = false;
+            this.btn_hinzufuegen.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel4
+            // lb_kunden
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(23, 108);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(167, 144);
-            this.panel4.TabIndex = 6;
+            this.lb_kunden.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_kunden.AutoSize = true;
+            this.lb_kunden.BackColor = System.Drawing.Color.Transparent;
+            this.lb_kunden.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_kunden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.lb_kunden.Location = new System.Drawing.Point(117, 39);
+            this.lb_kunden.Margin = new System.Windows.Forms.Padding(20);
+            this.lb_kunden.Name = "lb_kunden";
+            this.lb_kunden.Size = new System.Drawing.Size(91, 25);
+            this.lb_kunden.TabIndex = 3;
+            this.lb_kunden.Text = "Kunden";
             // 
-            // label4
+            // lb_passagiere
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(7, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 38);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Scanne Ticket oder \r\nBordkarte";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_passagiere.AutoSize = true;
+            this.lb_passagiere.BackColor = System.Drawing.Color.Transparent;
+            this.lb_passagiere.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_passagiere.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.lb_passagiere.Location = new System.Drawing.Point(437, 39);
+            this.lb_passagiere.Margin = new System.Windows.Forms.Padding(20);
+            this.lb_passagiere.Name = "lb_passagiere";
+            this.lb_passagiere.Size = new System.Drawing.Size(122, 25);
+            this.lb_passagiere.TabIndex = 4;
+            this.lb_passagiere.Text = "Passagiere";
             // 
-            // textBox1
+            // lb_checkIn
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(11, 92);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 25);
-            this.textBox1.TabIndex = 1;
+            this.lb_checkIn.AutoSize = true;
+            this.lb_checkIn.BackColor = System.Drawing.Color.Transparent;
+            this.lb_checkIn.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_checkIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.lb_checkIn.Location = new System.Drawing.Point(784, 39);
+            this.lb_checkIn.Margin = new System.Windows.Forms.Padding(20);
+            this.lb_checkIn.Name = "lb_checkIn";
+            this.lb_checkIn.Size = new System.Drawing.Size(107, 25);
+            this.lb_checkIn.TabIndex = 5;
+            this.lb_checkIn.Text = "Check-In";
+            this.lb_checkIn.Click += new System.EventHandler(this.label3_Click);
             // 
             // StartfensterMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lb_checkIn);
+            this.Controls.Add(this.lb_passagiere);
+            this.Controls.Add(this.lb_kunden);
+            this.Controls.Add(this.pn_kunden);
+            this.Controls.Add(this.pn_passagiere);
+            this.Controls.Add(this.pn_checkIn);
             this.Name = "StartfensterMenu";
-            this.Size = new System.Drawing.Size(800, 360);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.Size = new System.Drawing.Size(1000, 470);
+            this.pn_checkIn.ResumeLayout(false);
+            this.pn_checkInScan.ResumeLayout(false);
+            this.pn_checkInScan.PerformLayout();
+            this.pn_passagiere.ResumeLayout(false);
+            this.pn_kunden.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,20 +306,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pn_checkIn;
+        private System.Windows.Forms.Panel pn_passagiere;
+        private System.Windows.Forms.Panel pn_kunden;
+        private System.Windows.Forms.Label lb_kunden;
+        private System.Windows.Forms.Label lb_passagiere;
+        private System.Windows.Forms.Label lb_checkIn;
+        private System.Windows.Forms.Panel pn_checkInScan;
+        private System.Windows.Forms.TextBox tb_scan;
+        private System.Windows.Forms.Label lb_scanne;
+        private System.Windows.Forms.Button btn_startManuell;
+        private System.Windows.Forms.Button btn_umBuchen;
+        private System.Windows.Forms.Button btn_informationenAbrufen;
+        private System.Windows.Forms.Button btn_entfernen;
+        private System.Windows.Forms.Button btn_bearbeiten;
+        private System.Windows.Forms.Button btn_hinzufuegen;
     }
 }

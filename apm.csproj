@@ -49,6 +49,12 @@
     <Compile Include="Flug.cs" />
     <Compile Include="Fluggesellschaft.cs" />
     <Compile Include="Flugzeug.cs" />
+    <Compile Include="PassagierinfoSuche.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PassagierinfoSuche.Designer.cs">
+      <DependentUpon>PassagierinfoSuche.cs</DependentUpon>
+    </Compile>
     <Compile Include="SitznummerSite.cs" />
     <Compile Include="Sitzplatz.cs" />
     <Compile Include="Startfenster.cs">
@@ -70,6 +76,9 @@
     <Compile Include="StartfensterMenu.Designer.cs">
       <DependentUpon>StartfensterMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PassagierinfoSuche.resx">
+      <DependentUpon>PassagierinfoSuche.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

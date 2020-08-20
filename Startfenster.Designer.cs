@@ -28,100 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_sprache = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_anmelden = new System.Windows.Forms.LinkLabel();
-            this.startfensterMenu1 = new apm.StartfensterMenu();
-            this.panel1.SuspendLayout();
+            this.pn_header = new System.Windows.Forms.Panel();
+            this.lbtn_anmelden = new System.Windows.Forms.LinkLabel();
+            this.lbtn_sprache = new System.Windows.Forms.LinkLabel();
+            this.lb_home = new System.Windows.Forms.Label();
+            this.startfensterMenu = new apm.StartfensterMenu();
+            this.pn_header.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pn_header
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
-            this.panel1.Controls.Add(this.btn_anmelden);
-            this.panel1.Controls.Add(this.btn_sprache);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 73);
-            this.panel1.TabIndex = 0;
+            this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(221)))), ((int)(((byte)(225)))));
+            this.pn_header.Controls.Add(this.lbtn_anmelden);
+            this.pn_header.Controls.Add(this.lbtn_sprache);
+            this.pn_header.Controls.Add(this.lb_home);
+            this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pn_header.Location = new System.Drawing.Point(0, 0);
+            this.pn_header.Name = "pn_header";
+            this.pn_header.Size = new System.Drawing.Size(999, 73);
+            this.pn_header.TabIndex = 0;
             // 
-            // btn_sprache
+            // lbtn_anmelden
             // 
-            this.btn_sprache.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.btn_sprache.AutoSize = true;
-            this.btn_sprache.BackColor = System.Drawing.Color.Transparent;
-            this.btn_sprache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_sprache.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sprache.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.btn_sprache.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.btn_sprache.Location = new System.Drawing.Point(578, 39);
-            this.btn_sprache.Name = "btn_sprache";
-            this.btn_sprache.Size = new System.Drawing.Size(70, 18);
-            this.btn_sprache.TabIndex = 1;
-            this.btn_sprache.TabStop = true;
-            this.btn_sprache.Text = "Sprache";
+            this.lbtn_anmelden.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(104)))), ((int)(((byte)(146)))));
+            this.lbtn_anmelden.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbtn_anmelden.AutoSize = true;
+            this.lbtn_anmelden.BackColor = System.Drawing.Color.Transparent;
+            this.lbtn_anmelden.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbtn_anmelden.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtn_anmelden.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lbtn_anmelden.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.lbtn_anmelden.Location = new System.Drawing.Point(878, 36);
+            this.lbtn_anmelden.Name = "lbtn_anmelden";
+            this.lbtn_anmelden.Size = new System.Drawing.Size(85, 18);
+            this.lbtn_anmelden.TabIndex = 2;
+            this.lbtn_anmelden.TabStop = true;
+            this.lbtn_anmelden.Text = "Anmelden";
             // 
-            // label1
+            // lbtn_sprache
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HOME";
+            this.lbtn_sprache.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(104)))), ((int)(((byte)(146)))));
+            this.lbtn_sprache.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbtn_sprache.AutoSize = true;
+            this.lbtn_sprache.BackColor = System.Drawing.Color.Transparent;
+            this.lbtn_sprache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbtn_sprache.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtn_sprache.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lbtn_sprache.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
+            this.lbtn_sprache.Location = new System.Drawing.Point(762, 36);
+            this.lbtn_sprache.Name = "lbtn_sprache";
+            this.lbtn_sprache.Size = new System.Drawing.Size(70, 18);
+            this.lbtn_sprache.TabIndex = 1;
+            this.lbtn_sprache.TabStop = true;
+            this.lbtn_sprache.Text = "Sprache";
             // 
-            // btn_anmelden
+            // lb_home
             // 
-            this.btn_anmelden.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.btn_anmelden.AutoSize = true;
-            this.btn_anmelden.BackColor = System.Drawing.Color.Transparent;
-            this.btn_anmelden.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_anmelden.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_anmelden.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.btn_anmelden.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
-            this.btn_anmelden.Location = new System.Drawing.Point(681, 39);
-            this.btn_anmelden.Name = "btn_anmelden";
-            this.btn_anmelden.Size = new System.Drawing.Size(90, 18);
-            this.btn_anmelden.TabIndex = 2;
-            this.btn_anmelden.TabStop = true;
-            this.btn_anmelden.Text = "Anmeldem";
+            this.lb_home.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_home.AutoSize = true;
+            this.lb_home.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.lb_home.Location = new System.Drawing.Point(435, 15);
+            this.lb_home.Name = "lb_home";
+            this.lb_home.Size = new System.Drawing.Size(128, 44);
+            this.lb_home.TabIndex = 0;
+            this.lb_home.Text = "HOME";
+            this.lb_home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // startfensterMenu1
+            // startfensterMenu
             // 
-            this.startfensterMenu1.Location = new System.Drawing.Point(0, 79);
-            this.startfensterMenu1.Name = "startfensterMenu1";
-            this.startfensterMenu1.Size = new System.Drawing.Size(800, 360);
-            this.startfensterMenu1.TabIndex = 1;
+            this.startfensterMenu.Location = new System.Drawing.Point(0, 79);
+            this.startfensterMenu.Name = "startfensterMenu";
+            this.startfensterMenu.Size = new System.Drawing.Size(1000, 470);
+            this.startfensterMenu.TabIndex = 1;
             // 
             // Startfenster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.startfensterMenu1);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(999, 559);
+            this.Controls.Add(this.startfensterMenu);
+            this.Controls.Add(this.pn_header);
+            this.MinimumSize = new System.Drawing.Size(1015, 598);
             this.Name = "Startfenster";
             this.Text = "Startfenster";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pn_header.ResumeLayout(false);
+            this.pn_header.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel btn_sprache;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel btn_anmelden;
-        private StartfensterMenu startfensterMenu1;
+        private System.Windows.Forms.Panel pn_header;
+        private System.Windows.Forms.LinkLabel lbtn_sprache;
+        private System.Windows.Forms.Label lb_home;
+        private System.Windows.Forms.LinkLabel lbtn_anmelden;
+        private StartfensterMenu startfensterMenu;
     }
 }
 

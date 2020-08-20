@@ -10,21 +10,12 @@ using System.Windows.Forms;
 
 namespace apm
 {
-    public partial class StartfensterMenu : UserControl
+    public partial class PassagierinfoSuche : UserControl
     {
-        public StartfensterMenu()
+        public PassagierinfoSuche()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
