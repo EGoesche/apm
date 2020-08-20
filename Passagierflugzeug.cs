@@ -13,7 +13,7 @@ namespace apm
     /// verschiedenen Sitzplaetze beinhaltet. Die Klasse erbt vom 
     /// Flugzeug.
     /// </summary>
-    class Passagierflugzeug : Flugzeug, IContainer
+    class Passagierflugzeug : Flugzeug, IDisposable, IContainer
     {
         private ArrayList _sitzplatzList;
         public int Kapazität { get; set; }

@@ -40,9 +40,7 @@ namespace apm
         public Kunde(int kundennummer, string status, string vorname, string nachname, 
             DateTime geburtsdatum, string geschlecht, int telefonnummer, 
             string emailAdresse, string staatsbuergerschaft, string strasse,
-            string hausnummer, int zip, string wohnort, string land) : base(vorname, 
-                nachname, geburtsdatum, geschlecht, telefonnummer, emailAdresse, 
-                staatsbuergerschaft, strasse, hausnummer, zip, wohnort, land)
+            string hausnummer, int zip, string wohnort, string land)
         {
             Kundenummer = kundennummer;
             Status = status;

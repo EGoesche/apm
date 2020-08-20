@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace apm
 {
     /// <summary>
-    /// Flugzeug.
+    /// Abstrakte Klasse eines Flugzeuges.
     /// </summary>
-    class Flugzeug
+    abstract class Flugzeug
     {
         public string ID { get; set; }
         public string Hersteller { get; set; }
