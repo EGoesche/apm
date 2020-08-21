@@ -38,7 +38,7 @@ namespace apm
         /// <param name="wohnort">Wohnort des Kunden</param>
         /// <param name="land">Land, in welches der Kunde wohnhaft ist</param>
         public Kunde(int kundennummer, string status, string vorname, string nachname, 
-            DateTime geburtsdatum, string geschlecht, int telefonnummer, 
+            DateTime geburtsdatum, char geschlecht, int telefonnummer, 
             string emailAdresse, string staatsbuergerschaft, string strasse,
             string hausnummer, int zip, string wohnort, string land)
         {

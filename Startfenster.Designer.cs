@@ -32,13 +32,6 @@
             this.pn_CheckIn = new System.Windows.Forms.Panel();
             this.tb_scan = new System.Windows.Forms.TextBox();
             this.lb_checkIn = new System.Windows.Forms.Label();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.pn_Kunden = new System.Windows.Forms.Panel();
-            this.pn_header = new System.Windows.Forms.Panel();
-            this.lb_formtitel = new System.Windows.Forms.Label();
-            this.pn_shadow = new System.Windows.Forms.Panel();
-            this.pn_form = new System.Windows.Forms.Panel();
-            this.ipb_seite = new FontAwesome.Sharp.IconPictureBox();
             this.btn_startManuell = new FontAwesome.Sharp.IconButton();
             this.btn_checkIn = new FontAwesome.Sharp.IconButton();
             this.btn_umbuchen = new FontAwesome.Sharp.IconButton();
@@ -48,14 +41,21 @@
             this.btn_bearbeiten = new FontAwesome.Sharp.IconButton();
             this.btn_hinzufuegen = new FontAwesome.Sharp.IconButton();
             this.btn_kunden = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pn_Kunden = new System.Windows.Forms.Panel();
             this.pb_Logo = new System.Windows.Forms.PictureBox();
+            this.pn_header = new System.Windows.Forms.Panel();
+            this.lb_formtitel = new System.Windows.Forms.Label();
+            this.ipb_seite = new FontAwesome.Sharp.IconPictureBox();
+            this.pn_shadow = new System.Windows.Forms.Panel();
+            this.pn_form = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.pn_CheckIn.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.pn_Kunden.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.pn_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ipb_seite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -108,75 +108,6 @@
             this.lb_checkIn.TabIndex = 0;
             this.lb_checkIn.Text = "Scanne Ticket";
             this.lb_checkIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pn_Kunden);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 100);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // pn_Kunden
-            // 
-            this.pn_Kunden.Controls.Add(this.pb_Logo);
-            this.pn_Kunden.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_Kunden.Location = new System.Drawing.Point(0, 0);
-            this.pn_Kunden.Name = "pn_Kunden";
-            this.pn_Kunden.Size = new System.Drawing.Size(220, 100);
-            this.pn_Kunden.TabIndex = 1;
-            // 
-            // pn_header
-            // 
-            this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
-            this.pn_header.Controls.Add(this.lb_formtitel);
-            this.pn_header.Controls.Add(this.ipb_seite);
-            this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_header.Location = new System.Drawing.Point(220, 0);
-            this.pn_header.Name = "pn_header";
-            this.pn_header.Size = new System.Drawing.Size(1112, 45);
-            this.pn_header.TabIndex = 1;
-            // 
-            // lb_formtitel
-            // 
-            this.lb_formtitel.AutoSize = true;
-            this.lb_formtitel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_formtitel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
-            this.lb_formtitel.Location = new System.Drawing.Point(45, 13);
-            this.lb_formtitel.Name = "lb_formtitel";
-            this.lb_formtitel.Size = new System.Drawing.Size(96, 19);
-            this.lb_formtitel.TabIndex = 3;
-            this.lb_formtitel.Text = "Hinzufügen";
-            // 
-            // pn_shadow
-            // 
-            this.pn_shadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
-            this.pn_shadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_shadow.Location = new System.Drawing.Point(220, 45);
-            this.pn_shadow.Name = "pn_shadow";
-            this.pn_shadow.Size = new System.Drawing.Size(1112, 9);
-            this.pn_shadow.TabIndex = 2;
-            // 
-            // pn_form
-            // 
-            this.pn_form.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_form.Location = new System.Drawing.Point(220, 54);
-            this.pn_form.Name = "pn_form";
-            this.pn_form.Size = new System.Drawing.Size(1112, 634);
-            this.pn_form.TabIndex = 3;
-            // 
-            // ipb_seite
-            // 
-            this.ipb_seite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
-            this.ipb_seite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
-            this.ipb_seite.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.ipb_seite.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
-            this.ipb_seite.Location = new System.Drawing.Point(6, 3);
-            this.ipb_seite.Name = "ipb_seite";
-            this.ipb_seite.Size = new System.Drawing.Size(32, 32);
-            this.ipb_seite.TabIndex = 2;
-            this.ipb_seite.TabStop = false;
             // 
             // btn_startManuell
             // 
@@ -385,6 +316,24 @@
             this.btn_kunden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_kunden.UseVisualStyleBackColor = true;
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pn_Kunden);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // pn_Kunden
+            // 
+            this.pn_Kunden.Controls.Add(this.pb_Logo);
+            this.pn_Kunden.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pn_Kunden.Location = new System.Drawing.Point(0, 0);
+            this.pn_Kunden.Name = "pn_Kunden";
+            this.pn_Kunden.Size = new System.Drawing.Size(220, 100);
+            this.pn_Kunden.TabIndex = 1;
+            // 
             // pb_Logo
             // 
             this.pb_Logo.BackColor = System.Drawing.Color.Black;
@@ -395,6 +344,56 @@
             this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Logo.TabIndex = 0;
             this.pb_Logo.TabStop = false;
+            // 
+            // pn_header
+            // 
+            this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.pn_header.Controls.Add(this.lb_formtitel);
+            this.pn_header.Controls.Add(this.ipb_seite);
+            this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pn_header.Location = new System.Drawing.Point(220, 0);
+            this.pn_header.Name = "pn_header";
+            this.pn_header.Size = new System.Drawing.Size(1112, 45);
+            this.pn_header.TabIndex = 1;
+            // 
+            // lb_formtitel
+            // 
+            this.lb_formtitel.AutoSize = true;
+            this.lb_formtitel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_formtitel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            this.lb_formtitel.Location = new System.Drawing.Point(45, 13);
+            this.lb_formtitel.Name = "lb_formtitel";
+            this.lb_formtitel.Size = new System.Drawing.Size(96, 19);
+            this.lb_formtitel.TabIndex = 3;
+            this.lb_formtitel.Text = "Hinzufügen";
+            // 
+            // ipb_seite
+            // 
+            this.ipb_seite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.ipb_seite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            this.ipb_seite.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.ipb_seite.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            this.ipb_seite.Location = new System.Drawing.Point(6, 3);
+            this.ipb_seite.Name = "ipb_seite";
+            this.ipb_seite.Size = new System.Drawing.Size(32, 32);
+            this.ipb_seite.TabIndex = 2;
+            this.ipb_seite.TabStop = false;
+            // 
+            // pn_shadow
+            // 
+            this.pn_shadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.pn_shadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pn_shadow.Location = new System.Drawing.Point(220, 45);
+            this.pn_shadow.Name = "pn_shadow";
+            this.pn_shadow.Size = new System.Drawing.Size(1112, 9);
+            this.pn_shadow.TabIndex = 2;
+            // 
+            // pn_form
+            // 
+            this.pn_form.Location = new System.Drawing.Point(220, 54);
+            this.pn_form.Name = "pn_form";
+            this.pn_form.Size = new System.Drawing.Size(1112, 634);
+            this.pn_form.TabIndex = 3;
             // 
             // Startfenster
             // 
@@ -414,10 +413,10 @@
             this.pn_CheckIn.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             this.pn_Kunden.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.pn_header.ResumeLayout(false);
             this.pn_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ipb_seite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.ResumeLayout(false);
 
         }

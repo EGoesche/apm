@@ -16,7 +16,7 @@ namespace apm
         public string Vorname { get; set; }
         public string Nachname { get; set; }
         public DateTime Geburtsdatum { get; set; }
-        public string Geschlecht { get; set; }
+        public char Geschlecht { get; set; }
         public int Telefonnummer { get; set; }
         public string EMailAdresse { get; set; }
         public string Staatsbuergerschaft { get; set; }
