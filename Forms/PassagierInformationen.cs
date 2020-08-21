@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace apm
+namespace apm.Forms
 {
-    public partial class PassagierinfoSuche : UserControl
+    public partial class PassagierInformationen : Form
     {
-        public PassagierinfoSuche()
+        public PassagierInformationen()
         {
             InitializeComponent();
-        }
-
-        private void btn_zurueck_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

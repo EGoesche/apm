@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.14.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,17 +67,41 @@
     <Compile Include="Flug.cs" />
     <Compile Include="Fluggesellschaft.cs" />
     <Compile Include="Flugzeug.cs" />
-    <Compile Include="PassagierinfoAnzeige.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\KundenBearbeiten.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PassagierinfoAnzeige.Designer.cs">
-      <DependentUpon>PassagierinfoAnzeige.cs</DependentUpon>
+    <Compile Include="Forms\KundenBearbeiten.Designer.cs">
+      <DependentUpon>KundenBearbeiten.cs</DependentUpon>
     </Compile>
-    <Compile Include="PassagierinfoSuche.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\KundenEntfernen.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PassagierinfoSuche.Designer.cs">
-      <DependentUpon>PassagierinfoSuche.cs</DependentUpon>
+    <Compile Include="Forms\KundenEntfernen.Designer.cs">
+      <DependentUpon>KundenEntfernen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KundenHinzufuegen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KundenHinzufuegen.Designer.cs">
+      <DependentUpon>KundenHinzufuegen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KundenSuchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KundenSuchen.Designer.cs">
+      <DependentUpon>KundenSuchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PassagierInformationen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PassagierInformationen.Designer.cs">
+      <DependentUpon>PassagierInformationen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Umbuchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Umbuchen.Designer.cs">
+      <DependentUpon>Umbuchen.cs</DependentUpon>
     </Compile>
     <Compile Include="SitznummerSite.cs" />
     <Compile Include="Sitzplatz.cs" />
@@ -76,17 +118,23 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartfensterMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="StartfensterMenu.Designer.cs">
-      <DependentUpon>StartfensterMenu.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="PassagierinfoAnzeige.resx">
-      <DependentUpon>PassagierinfoAnzeige.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\KundenBearbeiten.resx">
+      <DependentUpon>KundenBearbeiten.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PassagierinfoSuche.resx">
-      <DependentUpon>PassagierinfoSuche.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\KundenEntfernen.resx">
+      <DependentUpon>KundenEntfernen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KundenHinzufuegen.resx">
+      <DependentUpon>KundenHinzufuegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KundenSuchen.resx">
+      <DependentUpon>KundenSuchen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PassagierInformationen.resx">
+      <DependentUpon>PassagierInformationen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Umbuchen.resx">
+      <DependentUpon>Umbuchen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,13 +144,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Startfenster.resx">
       <DependentUpon>Startfenster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartfensterMenu.resx">
-      <DependentUpon>StartfensterMenu.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,5 +163,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Platzhalter.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
