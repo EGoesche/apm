@@ -10,7 +10,7 @@ namespace apm
     /// <summary>
     /// Abstrakte Klasse einer Person.
     /// </summary>
-    abstract class Person
+    public abstract class Person
     {
         // Definition, Get und Set fuer die einzelnen Attribute einer Person
         public string Vorname { get; set; }

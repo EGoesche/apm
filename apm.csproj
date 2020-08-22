@@ -67,6 +67,12 @@
     <Compile Include="Flug.cs" />
     <Compile Include="Fluggesellschaft.cs" />
     <Compile Include="Flugzeug.cs" />
+    <Compile Include="Forms\KundenAnzeigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KundenAnzeigen.Designer.cs">
+      <DependentUpon>KundenAnzeigen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KundenBearbeiten.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\KundenAnzeigen.resx">
+      <DependentUpon>KundenAnzeigen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KundenBearbeiten.resx">
       <DependentUpon>KundenBearbeiten.cs</DependentUpon>
     </EmbeddedResource>

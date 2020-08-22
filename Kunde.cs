@@ -11,13 +11,14 @@ namespace apm
     /// Der Kunde ist eine Komponente, welche einem Kundenstamm zugeordnet werden 
     /// kann. Er erbt von der Person.
     /// </summary>
-    class Kunde : Person, IComponent
+    public class Kunde : Person, IComponent, IEquatable<Kunde>
     {
         private ISite _curKundennummerSite;
         public event EventHandler Disposed;
-        public int Kundenummer { get; set; }
+        public int Kundennummer { get; set; }
         public string Status { get; set; }
-        public Sitzplatz sitz { get; set; }
+        public Sitzplatz Sitz { get; set; }
+
 
 
         /// <summary>
@@ -42,7 +43,7 @@ namespace apm
             string emailAdresse, string staatsbuergerschaft, string strasse,
             string hausnummer, int zip, string wohnort, string land)
         {
-            Kundenummer = kundennummer;
+            Kundennummer = kundennummer;
             Status = status;
             Vorname = vorname;
             Nachname = nachname;
@@ -96,14 +97,25 @@ namespace apm
         public override bool Equals(object cmp)
         {
             Kunde cmpObj = (Kunde)cmp;
-            if (this.Kundenummer.Equals(cmpObj.Kundenummer) && this.Status.Equals(cmpObj.Status) && 
+            if (this.Kundennummer.Equals(cmpObj.Kundennummer) && this.Status.Equals(cmpObj.Status) && 
                 this.Vorname.Equals(cmpObj.Vorname) && this.Nachname.Equals(cmpObj.Nachname))
                 return true;
 
             return false;
         }
 
-        
+        /// <summary>
+        /// Vergleicht zwei Kundenobjekte miteinander, jedoch nur an der Kundennummer.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Kunde other)
+        {
+            if (other == null) return false;
+            return (this.Kundennummer.Equals(other.Kundennummer));
+        }
+
+
         /// <summary>
         /// Liefert den HashCode des Kundenobjektes.
         /// </summary>
@@ -112,5 +124,6 @@ namespace apm
         {
             return base.GetHashCode();
         }
+
     }
 }

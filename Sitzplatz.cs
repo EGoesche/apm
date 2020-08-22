@@ -11,7 +11,7 @@ namespace apm
     /// Der Sitzplatz ist eine Komponente, welche einem Passagierflugzeug
     /// zugeorndet werden kann.
     /// </summary>
-    class Sitzplatz : IComponent
+    public class Sitzplatz : IComponent
     {
         private ISite _curSitznummerSite;
         public event EventHandler Disposed;

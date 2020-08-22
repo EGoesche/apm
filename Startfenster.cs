@@ -21,7 +21,7 @@ namespace apm
         public Startfenster()
         {
             InitializeComponent();
-            ZeigeForm(new KundenSuchen());
+            ZeigeForm(new KundenHinzufuegen());
         }
 
         private void ZeigeForm(Form form)
@@ -81,7 +81,7 @@ namespace apm
         private void btn_hinzufuegen_Click(object sender, EventArgs e)
         {
             AktiviereButton(sender);
-            ZeigeForm(new KundenSuchen());
+            ZeigeForm(new KundenHinzufuegen());
         }
 
         private void btn_bearbeiten_Click(object sender, EventArgs e)

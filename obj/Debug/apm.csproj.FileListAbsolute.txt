@@ -16,3 +16,4 @@ C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.KundenHinzufuegen.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.KundenSuchen.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.PassagierInformationen.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.Umbuchen.resources
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.KundenAnzeigen.resources
