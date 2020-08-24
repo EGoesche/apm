@@ -35,7 +35,7 @@ namespace apm.Forms
         /// <param name="e"></param>
         private void KundenAnzeigen_Load(object sender, EventArgs e)
         {
-            Kunden = this.mainForm.Kunden;
+            Kunden = mainForm.Kunden;
             int index = Kunden.FindIndex(a => a.Kundennummer == int.Parse(mainForm.SelectedRow.Cells[0].Value.ToString()));
             tb_kundennummer.Text = Kunden[index].Kundennummer.ToString();
             tb_vorname.Text = Kunden[index].Vorname.ToString();
@@ -51,7 +51,6 @@ namespace apm.Forms
             tb_hausnummer.Text = Kunden[index].Hausnummer.ToString();
             tb_telefonnummer.Text = Kunden[index].Telefonnummer.ToString();
             tb_email.Text = Kunden[index].EMailAdresse.ToString();
-
         }
     }
 }

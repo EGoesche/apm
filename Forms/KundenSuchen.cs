@@ -271,7 +271,7 @@ namespace apm.Forms
                 {
                     pn_anzeige.Visible = false;
                     pn_suche.Visible = false;
-                    ZeigeForm(new KundenBearbeiten());
+                    ZeigeForm(new KundenBearbeiten(this));
                 }
             }
             else
