@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_kundenHinzufuegen = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_kundenHinzufuegen
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(340, 217);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Kunden hinzufügen";
+            this.lb_kundenHinzufuegen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_kundenHinzufuegen.AutoSize = true;
+            this.lb_kundenHinzufuegen.Location = new System.Drawing.Point(255, 176);
+            this.lb_kundenHinzufuegen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_kundenHinzufuegen.Name = "lb_kundenHinzufuegen";
+            this.lb_kundenHinzufuegen.Size = new System.Drawing.Size(99, 13);
+            this.lb_kundenHinzufuegen.TabIndex = 2;
+            this.lb_kundenHinzufuegen.Text = "Kunden hinzufügen";
             // 
             // KundenHinzufuegen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.lb_kundenHinzufuegen);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "KundenHinzufuegen";
             this.Text = "KundenHinzufuegen";
             this.ResumeLayout(false);
@@ -56,6 +58,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_kundenHinzufuegen;
     }
 }

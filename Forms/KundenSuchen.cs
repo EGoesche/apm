@@ -13,8 +13,9 @@ namespace apm.Forms
 {
     public partial class KundenSuchen : Form
     {
-        private List<Flug> Fluege { get; set; }
+        private string _nextForm = null;
         private Form _currentForm;
+        private List<Flug> Fluege { get; set; }
         public List<Kunde> Kunden { get; set; }
         public DataGridViewRow SelectedRow { get; set; }
 
@@ -22,10 +23,20 @@ namespace apm.Forms
         public KundenSuchen()
         {
             InitializeComponent();
-            Fluege = GetFluege();
-            Kunden = GetKunden();
         }
 
+        public KundenSuchen(string nextForm)
+        {
+            InitializeComponent();
+            Fluege = GetFluege();
+            Kunden = GetKunden();
+            _nextForm = nextForm;
+        }
+
+        /// <summary>
+        /// Schliesst die aktuelle Form und oeffnet die uebergebene Form.
+        /// </summary>
+        /// <param name="form">Anzuzeigende Form</param>
         private void ZeigeForm(Form form)
         {
             if (_currentForm != null)
@@ -59,11 +70,11 @@ namespace apm.Forms
                     "deutsch", "Am Schwanenteich", "8", 09648, "Mittweida", "Deutschland");
                 ksLufthansa.Add(kunde1, "1273856");
 
-                Kunde kunde2 = new Kunde(1936122, "unbekannt", "Jan", "Schmidt", DateTime.Now, 'm', 037183624, "j.schm@try.com",
+                Kunde kunde2 = new Kunde(1936122, "Flug storniert", "Jan", "Schmidt", DateTime.Now, 'm', 037183624, "j.schm@try.com",
                     "deutsch", "Gasse", "12b", 08213, "Stenn", "Deutschland");
                 ksLufthansa.Add(kunde2, "1936122");
 
-                Kunde kunde3 = new Kunde(1200836, "unbekannt", "Julia", "Meyer", DateTime.Now, 'w', 034821374, "julchen.mey@gmail.de",
+                Kunde kunde3 = new Kunde(1200836, "Flug gebucht", "Julia", "Meyer", DateTime.Now, 'w', 034821374, "julchen.mey@gmail.de",
                     "deutsch", "Am Tor", "27a", 01283, "Tübingen", "Deutschland");
                 ksLufthansa.Add(kunde3, "1200836");
             }
@@ -85,7 +96,7 @@ namespace apm.Forms
 
 
         /// <summary>
-        /// Erstelle Testdaten in Form von Fluegen
+        /// Erstelle Testdaten fuer Fluege
         /// </summary>
         /// <returns>Liste, welche die Fluege beinhaltet</returns>
         private List<Flug> GetFluege()
@@ -238,14 +249,36 @@ namespace apm.Forms
             WechselKundenFluege();
         }
 
+        /// <summary>
+        /// Bestaetigt die Auswahl eines Kunden uber die Suchergebnisse und oeffnet
+        /// das Fenster zum Bearbeiten.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_auswaehlen_Click(object sender, EventArgs e)
         {
             SelectedRow = dgv_fluegeKunden.Rows[dgv_fluegeKunden.CurrentCell.RowIndex];
-            pn_anzeige.Visible = false;
-            pn_suche.Visible = false;
-            ZeigeForm(new KundenAnzeigen(this));
-
-
+            Console.WriteLine(this.Name);
+            if (ibtn_fluegeKunden.Text == "Suchergebnisse")
+            {
+                if (_nextForm == "KundenAnzeigen")
+                {
+                    pn_anzeige.Visible = false;
+                    pn_suche.Visible = false;
+                    ZeigeForm(new KundenAnzeigen(this));
+                }
+                else
+                {
+                    pn_anzeige.Visible = false;
+                    pn_suche.Visible = false;
+                    ZeigeForm(new KundenBearbeiten());
+                }
+            }
+            else
+                // Die Implementation der Funktion, ueber welche ein Kunde auch anhand der kommenden
+                // Fluege ausgewaehlt werden kann, ist in diesem Beleg nicht vorgesehen.
+                MessageBox.Show("Bevor Sie einen Kunden auswählen können, müssen Sie diesen über das " +
+                    "Suchformular finden.", "Hinweis");
         }
     }
 }

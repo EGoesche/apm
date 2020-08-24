@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_umBuchen = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_umBuchen
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 217);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "(Um-)Buchen";
+            this.lb_umBuchen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_umBuchen.AutoSize = true;
+            this.lb_umBuchen.Location = new System.Drawing.Point(256, 176);
+            this.lb_umBuchen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_umBuchen.Name = "lb_umBuchen";
+            this.lb_umBuchen.Size = new System.Drawing.Size(69, 13);
+            this.lb_umBuchen.TabIndex = 3;
+            this.lb_umBuchen.Text = "(Um-)Buchen";
             // 
             // Umbuchen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.lb_umBuchen);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Umbuchen";
             this.Text = "Umbuchen";
             this.ResumeLayout(false);
@@ -56,6 +58,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_umBuchen;
     }
 }

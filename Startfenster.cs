@@ -87,7 +87,7 @@ namespace apm
         private void btn_bearbeiten_Click(object sender, EventArgs e)
         {
             AktiviereButton(sender);
-            ZeigeForm(new KundenSuchen());
+            ZeigeForm(new KundenSuchen("KundenBearbeiten"));
         }
 
         private void btn_entfernen_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace apm
         private void btn_informationenAbrufen_Click(object sender, EventArgs e)
         {
             AktiviereButton(sender);
-            ZeigeForm(new KundenSuchen());
+            ZeigeForm(new KundenSuchen("KundenAnzeigen"));
         }
 
         private void btn_umbuchen_Click(object sender, EventArgs e)

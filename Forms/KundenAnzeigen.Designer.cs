@@ -30,38 +30,39 @@
         {
             this.tc_infohistorie = new System.Windows.Forms.TabControl();
             this.tab_passagierinformationen = new System.Windows.Forms.TabPage();
-            this.tab_flughistorie = new System.Windows.Forms.TabPage();
-            this.lb_kundennummer = new System.Windows.Forms.Label();
-            this.tb_kundennummer = new System.Windows.Forms.TextBox();
-            this.lb_status = new System.Windows.Forms.Label();
-            this.cb_status = new System.Windows.Forms.ComboBox();
-            this.tb_vorname = new System.Windows.Forms.TextBox();
-            this.lb_vorname = new System.Windows.Forms.Label();
-            this.tb_nachname = new System.Windows.Forms.TextBox();
-            this.lb_nachname = new System.Windows.Forms.Label();
-            this.lb_geburtsdatum = new System.Windows.Forms.Label();
-            this.tb_strasse = new System.Windows.Forms.TextBox();
-            this.lb_strasse = new System.Windows.Forms.Label();
-            this.tb_zipCode = new System.Windows.Forms.TextBox();
-            this.lb_zipCode = new System.Windows.Forms.Label();
-            this.tb_wohnort = new System.Windows.Forms.TextBox();
-            this.lb_wohnort = new System.Windows.Forms.Label();
-            this.dtp_geburtsdatum = new System.Windows.Forms.DateTimePicker();
-            this.tb_hausnummer = new System.Windows.Forms.TextBox();
-            this.lb_hausnummer = new System.Windows.Forms.Label();
-            this.tb_land = new System.Windows.Forms.TextBox();
-            this.lb_land = new System.Windows.Forms.Label();
-            this.cb_geschlecht = new System.Windows.Forms.ComboBox();
-            this.lb_geschlecht = new System.Windows.Forms.Label();
-            this.tb_staatsbuergerschaft = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tb_telefonnummer = new System.Windows.Forms.TextBox();
-            this.lb_telefonnummer = new System.Windows.Forms.Label();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.lb_email = new System.Windows.Forms.Label();
-            this.ibtn_speichern = new FontAwesome.Sharp.IconButton();
+            this.tb_telefonnummer = new System.Windows.Forms.TextBox();
+            this.lb_telefonnummer = new System.Windows.Forms.Label();
+            this.tb_staatsbuergerschaft = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cb_geschlecht = new System.Windows.Forms.ComboBox();
+            this.lb_geschlecht = new System.Windows.Forms.Label();
+            this.tb_land = new System.Windows.Forms.TextBox();
+            this.lb_land = new System.Windows.Forms.Label();
+            this.tb_hausnummer = new System.Windows.Forms.TextBox();
+            this.lb_hausnummer = new System.Windows.Forms.Label();
+            this.dtp_geburtsdatum = new System.Windows.Forms.DateTimePicker();
+            this.tb_wohnort = new System.Windows.Forms.TextBox();
+            this.lb_wohnort = new System.Windows.Forms.Label();
+            this.tb_zipCode = new System.Windows.Forms.TextBox();
+            this.lb_zipCode = new System.Windows.Forms.Label();
+            this.tb_strasse = new System.Windows.Forms.TextBox();
+            this.lb_strasse = new System.Windows.Forms.Label();
+            this.lb_geburtsdatum = new System.Windows.Forms.Label();
+            this.tb_nachname = new System.Windows.Forms.TextBox();
+            this.lb_nachname = new System.Windows.Forms.Label();
+            this.tb_vorname = new System.Windows.Forms.TextBox();
+            this.lb_vorname = new System.Windows.Forms.Label();
+            this.cb_status = new System.Windows.Forms.ComboBox();
+            this.lb_status = new System.Windows.Forms.Label();
+            this.tb_kundennummer = new System.Windows.Forms.TextBox();
+            this.lb_kundennummer = new System.Windows.Forms.Label();
+            this.tab_flughistorie = new System.Windows.Forms.TabPage();
+            this.lb_flughistorie = new System.Windows.Forms.Label();
             this.tc_infohistorie.SuspendLayout();
             this.tab_passagierinformationen.SuspendLayout();
+            this.tab_flughistorie.SuspendLayout();
             this.SuspendLayout();
             // 
             // tc_infohistorie
@@ -81,7 +82,6 @@
             // 
             // tab_passagierinformationen
             // 
-            this.tab_passagierinformationen.Controls.Add(this.ibtn_speichern);
             this.tab_passagierinformationen.Controls.Add(this.tb_email);
             this.tab_passagierinformationen.Controls.Add(this.lb_email);
             this.tab_passagierinformationen.Controls.Add(this.tb_telefonnummer);
@@ -110,7 +110,7 @@
             this.tab_passagierinformationen.Controls.Add(this.lb_status);
             this.tab_passagierinformationen.Controls.Add(this.tb_kundennummer);
             this.tab_passagierinformationen.Controls.Add(this.lb_kundennummer);
-            this.tab_passagierinformationen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_passagierinformationen.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_passagierinformationen.Location = new System.Drawing.Point(4, 34);
             this.tab_passagierinformationen.Name = "tab_passagierinformationen";
             this.tab_passagierinformationen.Padding = new System.Windows.Forms.Padding(3);
@@ -119,193 +119,69 @@
             this.tab_passagierinformationen.Text = "Passagierinformationen";
             this.tab_passagierinformationen.UseVisualStyleBackColor = true;
             // 
-            // tab_flughistorie
+            // tb_email
             // 
-            this.tab_flughistorie.Location = new System.Drawing.Point(4, 34);
-            this.tab_flughistorie.Name = "tab_flughistorie";
-            this.tab_flughistorie.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_flughistorie.Size = new System.Drawing.Size(701, 365);
-            this.tab_flughistorie.TabIndex = 1;
-            this.tab_flughistorie.Text = "Flughistorie";
-            this.tab_flughistorie.UseVisualStyleBackColor = true;
+            this.tb_email.Location = new System.Drawing.Point(473, 223);
+            this.tb_email.Name = "tb_email";
+            this.tb_email.ReadOnly = true;
+            this.tb_email.Size = new System.Drawing.Size(182, 24);
+            this.tb_email.TabIndex = 30;
             // 
-            // lb_kundennummer
+            // lb_email
             // 
-            this.lb_kundennummer.AutoSize = true;
-            this.lb_kundennummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_kundennummer.Location = new System.Drawing.Point(3, 13);
-            this.lb_kundennummer.Name = "lb_kundennummer";
-            this.lb_kundennummer.Size = new System.Drawing.Size(101, 16);
-            this.lb_kundennummer.TabIndex = 0;
-            this.lb_kundennummer.Text = "Kundennummer";
+            this.lb_email.AutoSize = true;
+            this.lb_email.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_email.Location = new System.Drawing.Point(347, 223);
+            this.lb_email.Name = "lb_email";
+            this.lb_email.Size = new System.Drawing.Size(97, 16);
+            this.lb_email.TabIndex = 29;
+            this.lb_email.Text = "E-Mail-Adresse";
             // 
-            // tb_kundennummer
+            // tb_telefonnummer
             // 
-            this.tb_kundennummer.Location = new System.Drawing.Point(110, 6);
-            this.tb_kundennummer.Name = "tb_kundennummer";
-            this.tb_kundennummer.Size = new System.Drawing.Size(182, 22);
-            this.tb_kundennummer.TabIndex = 1;
+            this.tb_telefonnummer.Location = new System.Drawing.Point(473, 185);
+            this.tb_telefonnummer.Name = "tb_telefonnummer";
+            this.tb_telefonnummer.ReadOnly = true;
+            this.tb_telefonnummer.Size = new System.Drawing.Size(182, 24);
+            this.tb_telefonnummer.TabIndex = 28;
             // 
-            // lb_status
+            // lb_telefonnummer
             // 
-            this.lb_status.AutoSize = true;
-            this.lb_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_status.Location = new System.Drawing.Point(422, 9);
-            this.lb_status.Name = "lb_status";
-            this.lb_status.Size = new System.Drawing.Size(45, 16);
-            this.lb_status.TabIndex = 2;
-            this.lb_status.Text = "Status";
+            this.lb_telefonnummer.AutoSize = true;
+            this.lb_telefonnummer.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_telefonnummer.Location = new System.Drawing.Point(347, 185);
+            this.lb_telefonnummer.Name = "lb_telefonnummer";
+            this.lb_telefonnummer.Size = new System.Drawing.Size(99, 16);
+            this.lb_telefonnummer.TabIndex = 27;
+            this.lb_telefonnummer.Text = "Telefonnummer";
             // 
-            // cb_status
+            // tb_staatsbuergerschaft
             // 
-            this.cb_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_status.FormattingEnabled = true;
-            this.cb_status.Location = new System.Drawing.Point(473, 3);
-            this.cb_status.Name = "cb_status";
-            this.cb_status.Size = new System.Drawing.Size(144, 24);
-            this.cb_status.TabIndex = 3;
-            this.cb_status.Text = "Auswählen...";
+            this.tb_staatsbuergerschaft.Location = new System.Drawing.Point(473, 75);
+            this.tb_staatsbuergerschaft.Name = "tb_staatsbuergerschaft";
+            this.tb_staatsbuergerschaft.ReadOnly = true;
+            this.tb_staatsbuergerschaft.Size = new System.Drawing.Size(182, 24);
+            this.tb_staatsbuergerschaft.TabIndex = 26;
             // 
-            // tb_vorname
+            // label12
             // 
-            this.tb_vorname.Location = new System.Drawing.Point(110, 41);
-            this.tb_vorname.Name = "tb_vorname";
-            this.tb_vorname.Size = new System.Drawing.Size(182, 22);
-            this.tb_vorname.TabIndex = 5;
-            // 
-            // lb_vorname
-            // 
-            this.lb_vorname.AutoSize = true;
-            this.lb_vorname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_vorname.Location = new System.Drawing.Point(3, 48);
-            this.lb_vorname.Name = "lb_vorname";
-            this.lb_vorname.Size = new System.Drawing.Size(63, 16);
-            this.lb_vorname.TabIndex = 4;
-            this.lb_vorname.Text = "Vorname";
-            // 
-            // tb_nachname
-            // 
-            this.tb_nachname.Location = new System.Drawing.Point(110, 76);
-            this.tb_nachname.Name = "tb_nachname";
-            this.tb_nachname.Size = new System.Drawing.Size(182, 22);
-            this.tb_nachname.TabIndex = 7;
-            // 
-            // lb_nachname
-            // 
-            this.lb_nachname.AutoSize = true;
-            this.lb_nachname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nachname.Location = new System.Drawing.Point(3, 83);
-            this.lb_nachname.Name = "lb_nachname";
-            this.lb_nachname.Size = new System.Drawing.Size(74, 16);
-            this.lb_nachname.TabIndex = 6;
-            this.lb_nachname.Text = "Nachname";
-            // 
-            // lb_geburtsdatum
-            // 
-            this.lb_geburtsdatum.AutoSize = true;
-            this.lb_geburtsdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_geburtsdatum.Location = new System.Drawing.Point(3, 118);
-            this.lb_geburtsdatum.Name = "lb_geburtsdatum";
-            this.lb_geburtsdatum.Size = new System.Drawing.Size(92, 16);
-            this.lb_geburtsdatum.TabIndex = 8;
-            this.lb_geburtsdatum.Text = "Geburtsdatum";
-            // 
-            // tb_strasse
-            // 
-            this.tb_strasse.Location = new System.Drawing.Point(110, 146);
-            this.tb_strasse.Name = "tb_strasse";
-            this.tb_strasse.Size = new System.Drawing.Size(182, 22);
-            this.tb_strasse.TabIndex = 11;
-            // 
-            // lb_strasse
-            // 
-            this.lb_strasse.AutoSize = true;
-            this.lb_strasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_strasse.Location = new System.Drawing.Point(3, 153);
-            this.lb_strasse.Name = "lb_strasse";
-            this.lb_strasse.Size = new System.Drawing.Size(48, 16);
-            this.lb_strasse.TabIndex = 10;
-            this.lb_strasse.Text = "Straße";
-            // 
-            // tb_zipCode
-            // 
-            this.tb_zipCode.Location = new System.Drawing.Point(110, 181);
-            this.tb_zipCode.Name = "tb_zipCode";
-            this.tb_zipCode.Size = new System.Drawing.Size(182, 22);
-            this.tb_zipCode.TabIndex = 13;
-            // 
-            // lb_zipCode
-            // 
-            this.lb_zipCode.AutoSize = true;
-            this.lb_zipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_zipCode.Location = new System.Drawing.Point(3, 188);
-            this.lb_zipCode.Name = "lb_zipCode";
-            this.lb_zipCode.Size = new System.Drawing.Size(65, 16);
-            this.lb_zipCode.TabIndex = 12;
-            this.lb_zipCode.Text = "ZIP-Code";
-            // 
-            // tb_wohnort
-            // 
-            this.tb_wohnort.Location = new System.Drawing.Point(110, 217);
-            this.tb_wohnort.Name = "tb_wohnort";
-            this.tb_wohnort.Size = new System.Drawing.Size(182, 22);
-            this.tb_wohnort.TabIndex = 15;
-            // 
-            // lb_wohnort
-            // 
-            this.lb_wohnort.AutoSize = true;
-            this.lb_wohnort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_wohnort.Location = new System.Drawing.Point(3, 223);
-            this.lb_wohnort.Name = "lb_wohnort";
-            this.lb_wohnort.Size = new System.Drawing.Size(58, 16);
-            this.lb_wohnort.TabIndex = 14;
-            this.lb_wohnort.Text = "Wohnort";
-            // 
-            // dtp_geburtsdatum
-            // 
-            this.dtp_geburtsdatum.Location = new System.Drawing.Point(110, 111);
-            this.dtp_geburtsdatum.Name = "dtp_geburtsdatum";
-            this.dtp_geburtsdatum.Size = new System.Drawing.Size(182, 22);
-            this.dtp_geburtsdatum.TabIndex = 18;
-            // 
-            // tb_hausnummer
-            // 
-            this.tb_hausnummer.Location = new System.Drawing.Point(473, 145);
-            this.tb_hausnummer.Name = "tb_hausnummer";
-            this.tb_hausnummer.Size = new System.Drawing.Size(73, 22);
-            this.tb_hausnummer.TabIndex = 20;
-            // 
-            // lb_hausnummer
-            // 
-            this.lb_hausnummer.AutoSize = true;
-            this.lb_hausnummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hausnummer.Location = new System.Drawing.Point(366, 148);
-            this.lb_hausnummer.Name = "lb_hausnummer";
-            this.lb_hausnummer.Size = new System.Drawing.Size(88, 16);
-            this.lb_hausnummer.TabIndex = 19;
-            this.lb_hausnummer.Text = "Hausnummer";
-            // 
-            // tb_land
-            // 
-            this.tb_land.Location = new System.Drawing.Point(110, 255);
-            this.tb_land.Name = "tb_land";
-            this.tb_land.Size = new System.Drawing.Size(182, 22);
-            this.tb_land.TabIndex = 22;
-            // 
-            // lb_land
-            // 
-            this.lb_land.AutoSize = true;
-            this.lb_land.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_land.Location = new System.Drawing.Point(3, 261);
-            this.lb_land.Name = "lb_land";
-            this.lb_land.Size = new System.Drawing.Size(38, 16);
-            this.lb_land.TabIndex = 21;
-            this.lb_land.Text = "Land";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(347, 75);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(117, 16);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Staatsbürgerschaft";
             // 
             // cb_geschlecht
             // 
-            this.cb_geschlecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_geschlecht.Enabled = false;
+            this.cb_geschlecht.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_geschlecht.FormattingEnabled = true;
+            this.cb_geschlecht.Items.AddRange(new object[] {
+            "m",
+            "w",
+            "d"});
             this.cb_geschlecht.Location = new System.Drawing.Point(473, 40);
             this.cb_geschlecht.Name = "cb_geschlecht";
             this.cb_geschlecht.Size = new System.Drawing.Size(144, 24);
@@ -315,77 +191,226 @@
             // lb_geschlecht
             // 
             this.lb_geschlecht.AutoSize = true;
-            this.lb_geschlecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_geschlecht.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_geschlecht.Location = new System.Drawing.Point(392, 43);
             this.lb_geschlecht.Name = "lb_geschlecht";
-            this.lb_geschlecht.Size = new System.Drawing.Size(75, 16);
+            this.lb_geschlecht.Size = new System.Drawing.Size(70, 16);
             this.lb_geschlecht.TabIndex = 23;
             this.lb_geschlecht.Text = "Geschlecht";
             // 
-            // tb_staatsbuergerschaft
+            // tb_land
             // 
-            this.tb_staatsbuergerschaft.Location = new System.Drawing.Point(473, 75);
-            this.tb_staatsbuergerschaft.Name = "tb_staatsbuergerschaft";
-            this.tb_staatsbuergerschaft.Size = new System.Drawing.Size(182, 22);
-            this.tb_staatsbuergerschaft.TabIndex = 26;
+            this.tb_land.Location = new System.Drawing.Point(110, 255);
+            this.tb_land.Name = "tb_land";
+            this.tb_land.ReadOnly = true;
+            this.tb_land.Size = new System.Drawing.Size(182, 24);
+            this.tb_land.TabIndex = 22;
             // 
-            // label12
+            // lb_land
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(347, 75);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 16);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Staatsbürgerschaft";
+            this.lb_land.AutoSize = true;
+            this.lb_land.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_land.Location = new System.Drawing.Point(3, 261);
+            this.lb_land.Name = "lb_land";
+            this.lb_land.Size = new System.Drawing.Size(36, 16);
+            this.lb_land.TabIndex = 21;
+            this.lb_land.Text = "Land";
             // 
-            // tb_telefonnummer
+            // tb_hausnummer
             // 
-            this.tb_telefonnummer.Location = new System.Drawing.Point(473, 185);
-            this.tb_telefonnummer.Name = "tb_telefonnummer";
-            this.tb_telefonnummer.Size = new System.Drawing.Size(182, 22);
-            this.tb_telefonnummer.TabIndex = 28;
+            this.tb_hausnummer.Location = new System.Drawing.Point(473, 145);
+            this.tb_hausnummer.Name = "tb_hausnummer";
+            this.tb_hausnummer.ReadOnly = true;
+            this.tb_hausnummer.Size = new System.Drawing.Size(73, 24);
+            this.tb_hausnummer.TabIndex = 20;
             // 
-            // lb_telefonnummer
+            // lb_hausnummer
             // 
-            this.lb_telefonnummer.AutoSize = true;
-            this.lb_telefonnummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_telefonnummer.Location = new System.Drawing.Point(347, 185);
-            this.lb_telefonnummer.Name = "lb_telefonnummer";
-            this.lb_telefonnummer.Size = new System.Drawing.Size(102, 16);
-            this.lb_telefonnummer.TabIndex = 27;
-            this.lb_telefonnummer.Text = "Telefonnummer";
+            this.lb_hausnummer.AutoSize = true;
+            this.lb_hausnummer.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hausnummer.Location = new System.Drawing.Point(366, 148);
+            this.lb_hausnummer.Name = "lb_hausnummer";
+            this.lb_hausnummer.Size = new System.Drawing.Size(85, 16);
+            this.lb_hausnummer.TabIndex = 19;
+            this.lb_hausnummer.Text = "Hausnummer";
             // 
-            // tb_email
+            // dtp_geburtsdatum
             // 
-            this.tb_email.Location = new System.Drawing.Point(473, 223);
-            this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(182, 22);
-            this.tb_email.TabIndex = 30;
+            this.dtp_geburtsdatum.Enabled = false;
+            this.dtp_geburtsdatum.Location = new System.Drawing.Point(110, 111);
+            this.dtp_geburtsdatum.Name = "dtp_geburtsdatum";
+            this.dtp_geburtsdatum.Size = new System.Drawing.Size(182, 24);
+            this.dtp_geburtsdatum.TabIndex = 18;
             // 
-            // lb_email
+            // tb_wohnort
             // 
-            this.lb_email.AutoSize = true;
-            this.lb_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_email.Location = new System.Drawing.Point(347, 223);
-            this.lb_email.Name = "lb_email";
-            this.lb_email.Size = new System.Drawing.Size(101, 16);
-            this.lb_email.TabIndex = 29;
-            this.lb_email.Text = "E-Mail-Adresse";
+            this.tb_wohnort.Location = new System.Drawing.Point(110, 217);
+            this.tb_wohnort.Name = "tb_wohnort";
+            this.tb_wohnort.ReadOnly = true;
+            this.tb_wohnort.Size = new System.Drawing.Size(182, 24);
+            this.tb_wohnort.TabIndex = 15;
             // 
-            // ibtn_speichern
+            // lb_wohnort
             // 
-            this.ibtn_speichern.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.ibtn_speichern.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ibtn_speichern.IconColor = System.Drawing.Color.Black;
-            this.ibtn_speichern.IconSize = 16;
-            this.ibtn_speichern.Location = new System.Drawing.Point(272, 301);
-            this.ibtn_speichern.Name = "ibtn_speichern";
-            this.ibtn_speichern.Rotation = 0D;
-            this.ibtn_speichern.Size = new System.Drawing.Size(182, 23);
-            this.ibtn_speichern.TabIndex = 31;
-            this.ibtn_speichern.Text = "Speichern";
-            this.ibtn_speichern.UseVisualStyleBackColor = true;
+            this.lb_wohnort.AutoSize = true;
+            this.lb_wohnort.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_wohnort.Location = new System.Drawing.Point(3, 223);
+            this.lb_wohnort.Name = "lb_wohnort";
+            this.lb_wohnort.Size = new System.Drawing.Size(59, 16);
+            this.lb_wohnort.TabIndex = 14;
+            this.lb_wohnort.Text = "Wohnort";
+            // 
+            // tb_zipCode
+            // 
+            this.tb_zipCode.Location = new System.Drawing.Point(110, 181);
+            this.tb_zipCode.Name = "tb_zipCode";
+            this.tb_zipCode.ReadOnly = true;
+            this.tb_zipCode.Size = new System.Drawing.Size(182, 24);
+            this.tb_zipCode.TabIndex = 13;
+            // 
+            // lb_zipCode
+            // 
+            this.lb_zipCode.AutoSize = true;
+            this.lb_zipCode.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_zipCode.Location = new System.Drawing.Point(3, 188);
+            this.lb_zipCode.Name = "lb_zipCode";
+            this.lb_zipCode.Size = new System.Drawing.Size(61, 16);
+            this.lb_zipCode.TabIndex = 12;
+            this.lb_zipCode.Text = "ZIP-Code";
+            // 
+            // tb_strasse
+            // 
+            this.tb_strasse.Location = new System.Drawing.Point(110, 146);
+            this.tb_strasse.Name = "tb_strasse";
+            this.tb_strasse.ReadOnly = true;
+            this.tb_strasse.Size = new System.Drawing.Size(182, 24);
+            this.tb_strasse.TabIndex = 11;
+            // 
+            // lb_strasse
+            // 
+            this.lb_strasse.AutoSize = true;
+            this.lb_strasse.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_strasse.Location = new System.Drawing.Point(3, 153);
+            this.lb_strasse.Name = "lb_strasse";
+            this.lb_strasse.Size = new System.Drawing.Size(45, 16);
+            this.lb_strasse.TabIndex = 10;
+            this.lb_strasse.Text = "Straße";
+            // 
+            // lb_geburtsdatum
+            // 
+            this.lb_geburtsdatum.AutoSize = true;
+            this.lb_geburtsdatum.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_geburtsdatum.Location = new System.Drawing.Point(3, 118);
+            this.lb_geburtsdatum.Name = "lb_geburtsdatum";
+            this.lb_geburtsdatum.Size = new System.Drawing.Size(91, 16);
+            this.lb_geburtsdatum.TabIndex = 8;
+            this.lb_geburtsdatum.Text = "Geburtsdatum";
+            // 
+            // tb_nachname
+            // 
+            this.tb_nachname.Location = new System.Drawing.Point(110, 76);
+            this.tb_nachname.Name = "tb_nachname";
+            this.tb_nachname.ReadOnly = true;
+            this.tb_nachname.Size = new System.Drawing.Size(182, 24);
+            this.tb_nachname.TabIndex = 7;
+            // 
+            // lb_nachname
+            // 
+            this.lb_nachname.AutoSize = true;
+            this.lb_nachname.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nachname.Location = new System.Drawing.Point(3, 83);
+            this.lb_nachname.Name = "lb_nachname";
+            this.lb_nachname.Size = new System.Drawing.Size(70, 16);
+            this.lb_nachname.TabIndex = 6;
+            this.lb_nachname.Text = "Nachname";
+            // 
+            // tb_vorname
+            // 
+            this.tb_vorname.Location = new System.Drawing.Point(110, 41);
+            this.tb_vorname.Name = "tb_vorname";
+            this.tb_vorname.ReadOnly = true;
+            this.tb_vorname.Size = new System.Drawing.Size(182, 24);
+            this.tb_vorname.TabIndex = 5;
+            // 
+            // lb_vorname
+            // 
+            this.lb_vorname.AutoSize = true;
+            this.lb_vorname.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_vorname.Location = new System.Drawing.Point(3, 48);
+            this.lb_vorname.Name = "lb_vorname";
+            this.lb_vorname.Size = new System.Drawing.Size(61, 16);
+            this.lb_vorname.TabIndex = 4;
+            this.lb_vorname.Text = "Vorname";
+            // 
+            // cb_status
+            // 
+            this.cb_status.Enabled = false;
+            this.cb_status.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_status.FormattingEnabled = true;
+            this.cb_status.Items.AddRange(new object[] {
+            "Flug gebucht",
+            "eingecheckt",
+            "eingecheckt und Gepäck abgegeben",
+            "Sicherheitskontrolle erfolgreich durchlaufen",
+            "Sicherheitskontrolle fehlgeschlagen",
+            "an Bord",
+            "Flug storniert",
+            "unbekannt"});
+            this.cb_status.Location = new System.Drawing.Point(473, 3);
+            this.cb_status.Name = "cb_status";
+            this.cb_status.Size = new System.Drawing.Size(144, 24);
+            this.cb_status.TabIndex = 3;
+            this.cb_status.Text = "Auswählen...";
+            // 
+            // lb_status
+            // 
+            this.lb_status.AutoSize = true;
+            this.lb_status.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_status.Location = new System.Drawing.Point(422, 9);
+            this.lb_status.Name = "lb_status";
+            this.lb_status.Size = new System.Drawing.Size(43, 16);
+            this.lb_status.TabIndex = 2;
+            this.lb_status.Text = "Status";
+            // 
+            // tb_kundennummer
+            // 
+            this.tb_kundennummer.Location = new System.Drawing.Point(110, 6);
+            this.tb_kundennummer.Name = "tb_kundennummer";
+            this.tb_kundennummer.ReadOnly = true;
+            this.tb_kundennummer.Size = new System.Drawing.Size(182, 24);
+            this.tb_kundennummer.TabIndex = 1;
+            // 
+            // lb_kundennummer
+            // 
+            this.lb_kundennummer.AutoSize = true;
+            this.lb_kundennummer.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_kundennummer.Location = new System.Drawing.Point(3, 13);
+            this.lb_kundennummer.Name = "lb_kundennummer";
+            this.lb_kundennummer.Size = new System.Drawing.Size(100, 16);
+            this.lb_kundennummer.TabIndex = 0;
+            this.lb_kundennummer.Text = "Kundennummer";
+            // 
+            // tab_flughistorie
+            // 
+            this.tab_flughistorie.Controls.Add(this.lb_flughistorie);
+            this.tab_flughistorie.Location = new System.Drawing.Point(4, 34);
+            this.tab_flughistorie.Name = "tab_flughistorie";
+            this.tab_flughistorie.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_flughistorie.Size = new System.Drawing.Size(701, 365);
+            this.tab_flughistorie.TabIndex = 1;
+            this.tab_flughistorie.Text = "Flughistorie";
+            this.tab_flughistorie.UseVisualStyleBackColor = true;
+            // 
+            // lb_flughistorie
+            // 
+            this.lb_flughistorie.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_flughistorie.AutoSize = true;
+            this.lb_flughistorie.Location = new System.Drawing.Point(283, 172);
+            this.lb_flughistorie.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_flughistorie.Name = "lb_flughistorie";
+            this.lb_flughistorie.Size = new System.Drawing.Size(92, 21);
+            this.lb_flughistorie.TabIndex = 3;
+            this.lb_flughistorie.Text = "Flughistorie";
             // 
             // KundenAnzeigen
             // 
@@ -399,6 +424,8 @@
             this.tc_infohistorie.ResumeLayout(false);
             this.tab_passagierinformationen.ResumeLayout(false);
             this.tab_passagierinformationen.PerformLayout();
+            this.tab_flughistorie.ResumeLayout(false);
+            this.tab_flughistorie.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +463,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cb_geschlecht;
         private System.Windows.Forms.Label lb_geschlecht;
-        private FontAwesome.Sharp.IconButton ibtn_speichern;
+        private System.Windows.Forms.Label lb_flughistorie;
     }
 }

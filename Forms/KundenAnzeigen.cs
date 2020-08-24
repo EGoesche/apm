@@ -27,18 +27,31 @@ namespace apm.Forms
         }
 
         /// <summary>
-        /// Uebertrage die Kundenliste von der Form KundenSuchen
+        /// Beschafft die Kundenliste von der Form KundenSuchen, sucht in dieser Liste
+        /// nach dem, Kunden (anhand der Kundennummer), welcher ausgewaehlt wurde  und
+        /// fuellt dessen Werte in das Formular.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void KundenAnzeigen_Load(object sender, EventArgs e)
         {
-            // Gib die im vorherigen Fenster ausgewaehlte Kundennummer aus
-            tb_kundennummer.Text = this.mainForm.SelectedRow.Cells[0].Value.ToString();
             Kunden = this.mainForm.Kunden;
-            //Kunden[1].
-            // TODO: Suche in der Kundenliste nach dem Kundenobjekt mit der Kundennummer, welche in der SelectedRow steht
-            // und schreibe alle seine Werte in die Textboxes
+            int index = Kunden.FindIndex(a => a.Kundennummer == int.Parse(mainForm.SelectedRow.Cells[0].Value.ToString()));
+            tb_kundennummer.Text = Kunden[index].Kundennummer.ToString();
+            tb_vorname.Text = Kunden[index].Vorname.ToString();
+            tb_nachname.Text = Kunden[index].Nachname.ToString();
+            dtp_geburtsdatum.Value = Kunden[index].Geburtsdatum.Date;
+            tb_strasse.Text = Kunden[index].Strasse.ToString();
+            tb_zipCode.Text = Kunden[index].Zip.ToString();
+            tb_wohnort.Text = Kunden[index].Wohnort.ToString();
+            tb_land.Text = Kunden[index].Land.ToString();
+            cb_status.SelectedItem = Kunden[index].Status.ToString();
+            cb_geschlecht.SelectedItem = Kunden[index].Geschlecht.ToString();
+            tb_staatsbuergerschaft.Text = Kunden[index].Staatsbuergerschaft.ToString();
+            tb_hausnummer.Text = Kunden[index].Hausnummer.ToString();
+            tb_telefonnummer.Text = Kunden[index].Telefonnummer.ToString();
+            tb_email.Text = Kunden[index].EMailAdresse.ToString();
+
         }
     }
 }
