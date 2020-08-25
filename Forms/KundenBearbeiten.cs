@@ -13,7 +13,8 @@ namespace apm.Forms
     public partial class KundenBearbeiten : Form
     {
         public List<Kunde> Kunden { get; set; }
-        private KundenSuchen mainForm = null;
+        private KundenSuchen prevForm = null;
+        private Startfenster mainForm = null;
         private int _kundenIndex;
 
         public KundenBearbeiten()
@@ -21,16 +22,17 @@ namespace apm.Forms
             InitializeComponent();
         }
 
-        public KundenBearbeiten(Form callingForm)
+        public KundenBearbeiten(Form main, Form callingForm)
         {
-            mainForm = callingForm as KundenSuchen;
+            prevForm = callingForm as KundenSuchen;
+            mainForm = main as Startfenster;
             InitializeComponent();
         }
 
         private void KundenBearbeiten_Load(object sender, EventArgs e)
         {
-            Kunden = mainForm.Kunden;
-            _kundenIndex = Kunden.FindIndex(a => a.Kundennummer == int.Parse(mainForm.SelectedRow.Cells[0].Value.ToString()));
+            Kunden = mainForm.GetKunden();
+            _kundenIndex = Kunden.FindIndex(a => a.Kundennummer == int.Parse(prevForm.SelectedRow.Cells[0].Value.ToString()));
             tb_kundennummer.Text = Kunden[_kundenIndex].Kundennummer.ToString();
             tb_vorname.Text = Kunden[_kundenIndex].Vorname.ToString();
             tb_nachname.Text = Kunden[_kundenIndex].Nachname.ToString();
@@ -63,6 +65,7 @@ namespace apm.Forms
             Kunden[_kundenIndex].Hausnummer = tb_hausnummer.Text;
             Kunden[_kundenIndex].Telefonnummer = int.Parse(tb_telefonnummer.Text);
             Kunden[_kundenIndex].EMailAdresse = tb_email.Text;
+            mainForm.SetKunden(Kunden);
         }
     }
 }

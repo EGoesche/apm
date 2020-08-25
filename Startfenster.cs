@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,22 @@ namespace apm
     {
         private IconButton _currentButton;
         private Form _currentForm;
+        List<Kunde> Kunden = new List<Kunde>();
+
+        public List<Kunde> GetKunden()
+        {
+            return Kunden;
+        }
+
+        public void SetKunden(List<Kunde> kundenliste)
+        {
+            Kunden = kundenliste;
+        }
 
         public Startfenster()
         {
             InitializeComponent();
+            GeneriereKunden();
             ZeigeForm(new KundenHinzufuegen());
         }
 
@@ -77,6 +90,41 @@ namespace apm
             }
         }
 
+        /// <summary>
+        /// Erstellt einen Kundenstamm und fuegt Kunden hinzu fuer Testzwecke.
+        /// </summary>
+        private void GeneriereKunden()
+        {
+            
+            Kundenstamm ksLufthansa = new Kundenstamm("Lufthansa");
+            try
+            {
+                Kunde kunde1 = new Kunde(1273856, "unbekannt", "Hans", "Mueller", DateTime.Now, 'm', 0152017324, "h.mueller@test.de",
+                    "deutsch", "Am Schwanenteich", "8", 09648, "Mittweida", "Deutschland");
+                ksLufthansa.Add(kunde1, "1273856");
+
+                Kunde kunde2 = new Kunde(1936122, "Flug storniert", "Jan", "Schmidt", DateTime.Now, 'm', 037183624, "j.schm@try.com",
+                    "deutsch", "Gasse", "12b", 08213, "Stenn", "Deutschland");
+                ksLufthansa.Add(kunde2, "1936122");
+
+                Kunde kunde3 = new Kunde(1200836, "Flug gebucht", "Julia", "Meyer", DateTime.Now, 'w', 034821374, "julchen.mey@gmail.de",
+                    "deutsch", "Am Tor", "27a", 01283, "Tübingen", "Deutschland");
+                ksLufthansa.Add(kunde3, "1200836");
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Kunde konnte nicht hinzugefuegt werden: " + e.Message);
+            }
+
+            ComponentCollection kundenstammListe = ksLufthansa.Components;
+            IEnumerator denum = kundenstammListe.GetEnumerator();
+
+            while (denum.MoveNext())
+            {
+                Kunden.Add((Kunde)denum.Current);
+            }
+        }
+
 
         private void btn_hinzufuegen_Click(object sender, EventArgs e)
         {
@@ -87,7 +135,7 @@ namespace apm
         private void btn_bearbeiten_Click(object sender, EventArgs e)
         {
             AktiviereButton(sender);
-            ZeigeForm(new KundenSuchen("KundenBearbeiten"));
+            ZeigeForm(new KundenSuchen(this, "KundenBearbeiten"));
         }
 
         private void btn_entfernen_Click(object sender, EventArgs e)
@@ -99,7 +147,7 @@ namespace apm
         private void btn_informationenAbrufen_Click(object sender, EventArgs e)
         {
             AktiviereButton(sender);
-            ZeigeForm(new KundenSuchen("KundenAnzeigen"));
+            ZeigeForm(new KundenSuchen(this, "KundenAnzeigen"));
         }
 
         private void btn_umbuchen_Click(object sender, EventArgs e)

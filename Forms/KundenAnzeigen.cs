@@ -13,16 +13,18 @@ namespace apm.Forms
     public partial class KundenAnzeigen : Form
     {
         public List<Kunde> Kunden { get; set; }
-        private KundenSuchen mainForm = null;
+        private KundenSuchen prevForm = null;
+        private Startfenster mainForm = null;
 
         public KundenAnzeigen()
         {
             InitializeComponent();
         }
 
-        public KundenAnzeigen(Form callingForm)
+        public KundenAnzeigen(Form main, Form callingForm)
         {
-            mainForm = callingForm as KundenSuchen;
+            prevForm = callingForm as KundenSuchen;
+            mainForm = main as Startfenster;
             InitializeComponent();
         }
 
@@ -35,8 +37,8 @@ namespace apm.Forms
         /// <param name="e"></param>
         private void KundenAnzeigen_Load(object sender, EventArgs e)
         {
-            Kunden = mainForm.Kunden;
-            int index = Kunden.FindIndex(a => a.Kundennummer == int.Parse(mainForm.SelectedRow.Cells[0].Value.ToString()));
+            Kunden = mainForm.GetKunden();
+            int index = Kunden.FindIndex(a => a.Kundennummer == int.Parse(prevForm.SelectedRow.Cells[0].Value.ToString()));
             tb_kundennummer.Text = Kunden[index].Kundennummer.ToString();
             tb_vorname.Text = Kunden[index].Vorname.ToString();
             tb_nachname.Text = Kunden[index].Nachname.ToString();
