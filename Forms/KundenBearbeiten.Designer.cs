@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pn_bearbeiten = new System.Windows.Forms.Panel();
+            this.btn_speichern = new FontAwesome.Sharp.IconButton();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.lb_email = new System.Windows.Forms.Label();
             this.tb_telefonnummer = new System.Windows.Forms.TextBox();
             this.lb_telefonnummer = new System.Windows.Forms.Label();
             this.tb_staatsbuergerschaft = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.cb_geschlecht = new System.Windows.Forms.ComboBox();
             this.lb_geschlecht = new System.Windows.Forms.Label();
             this.tb_land = new System.Windows.Forms.TextBox();
@@ -57,13 +57,15 @@
             this.lb_status = new System.Windows.Forms.Label();
             this.tb_kundennummer = new System.Windows.Forms.TextBox();
             this.lb_kundennummer = new System.Windows.Forms.Label();
-            this.btn_speichern = new FontAwesome.Sharp.IconButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lb_feedback = new System.Windows.Forms.Label();
             this.pn_bearbeiten.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_bearbeiten
             // 
             this.pn_bearbeiten.BackColor = System.Drawing.SystemColors.Control;
+            this.pn_bearbeiten.Controls.Add(this.lb_feedback);
             this.pn_bearbeiten.Controls.Add(this.btn_speichern);
             this.pn_bearbeiten.Controls.Add(this.tb_email);
             this.pn_bearbeiten.Controls.Add(this.lb_email);
@@ -98,6 +100,25 @@
             this.pn_bearbeiten.Name = "pn_bearbeiten";
             this.pn_bearbeiten.Size = new System.Drawing.Size(709, 403);
             this.pn_bearbeiten.TabIndex = 0;
+            // 
+            // btn_speichern
+            // 
+            this.btn_speichern.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_speichern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_speichern.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btn_speichern.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_speichern.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_speichern.IconColor = System.Drawing.Color.Black;
+            this.btn_speichern.IconSize = 16;
+            this.btn_speichern.Location = new System.Drawing.Point(290, 345);
+            this.btn_speichern.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_speichern.Name = "btn_speichern";
+            this.btn_speichern.Rotation = 0D;
+            this.btn_speichern.Size = new System.Drawing.Size(123, 34);
+            this.btn_speichern.TabIndex = 59;
+            this.btn_speichern.Text = "Speichern";
+            this.btn_speichern.UseVisualStyleBackColor = true;
+            this.btn_speichern.Click += new System.EventHandler(this.btn_speichern_Click);
             // 
             // tb_email
             // 
@@ -139,16 +160,6 @@
             this.tb_staatsbuergerschaft.Name = "tb_staatsbuergerschaft";
             this.tb_staatsbuergerschaft.Size = new System.Drawing.Size(182, 20);
             this.tb_staatsbuergerschaft.TabIndex = 54;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(372, 101);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 16);
-            this.label12.TabIndex = 53;
-            this.label12.Text = "Staatsbürgerschaft";
             // 
             // cb_geschlecht
             // 
@@ -356,24 +367,26 @@
             this.lb_kundennummer.TabIndex = 31;
             this.lb_kundennummer.Text = "Kundennummer";
             // 
-            // btn_speichern
+            // label12
             // 
-            this.btn_speichern.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_speichern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_speichern.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btn_speichern.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_speichern.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btn_speichern.IconColor = System.Drawing.Color.Black;
-            this.btn_speichern.IconSize = 16;
-            this.btn_speichern.Location = new System.Drawing.Point(290, 333);
-            this.btn_speichern.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_speichern.Name = "btn_speichern";
-            this.btn_speichern.Rotation = 0D;
-            this.btn_speichern.Size = new System.Drawing.Size(123, 34);
-            this.btn_speichern.TabIndex = 59;
-            this.btn_speichern.Text = "Speichern";
-            this.btn_speichern.UseVisualStyleBackColor = true;
-            this.btn_speichern.Click += new System.EventHandler(this.btn_speichern_Click);
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(372, 101);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(117, 16);
+            this.label12.TabIndex = 53;
+            this.label12.Text = "Staatsbürgerschaft";
+            // 
+            // lb_feedback
+            // 
+            this.lb_feedback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_feedback.AutoSize = true;
+            this.lb_feedback.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_feedback.Location = new System.Drawing.Point(344, 314);
+            this.lb_feedback.Name = "lb_feedback";
+            this.lb_feedback.Size = new System.Drawing.Size(0, 16);
+            this.lb_feedback.TabIndex = 60;
+            this.lb_feedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // KundenBearbeiten
             // 
@@ -381,7 +394,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 403);
             this.Controls.Add(this.pn_bearbeiten);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KundenBearbeiten";
             this.Text = "KundenBearbeiten";
             this.Load += new System.EventHandler(this.KundenBearbeiten_Load);
@@ -399,7 +412,6 @@
         private System.Windows.Forms.TextBox tb_telefonnummer;
         private System.Windows.Forms.Label lb_telefonnummer;
         private System.Windows.Forms.TextBox tb_staatsbuergerschaft;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cb_geschlecht;
         private System.Windows.Forms.Label lb_geschlecht;
         private System.Windows.Forms.TextBox tb_land;
@@ -423,5 +435,7 @@
         private System.Windows.Forms.TextBox tb_kundennummer;
         private System.Windows.Forms.Label lb_kundennummer;
         private FontAwesome.Sharp.IconButton btn_speichern;
+        private System.Windows.Forms.Label lb_feedback;
+        private System.Windows.Forms.Label label12;
     }
 }

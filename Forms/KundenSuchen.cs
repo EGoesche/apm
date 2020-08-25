@@ -26,13 +26,13 @@ namespace apm.Forms
             InitializeComponent();
         }
 
-        public KundenSuchen(Form callingForm, string nextForm)
+        public KundenSuchen(Form startFenster, string naechstesFenster)
         {
             InitializeComponent();
-            mainForm = callingForm as Startfenster;
-            Fluege = GetFluege();
+            mainForm = startFenster as Startfenster;
+            Fluege = mainForm.GetFluege();
             Kunden = mainForm.GetKunden();
-            _nextForm = nextForm;
+            _nextForm = naechstesFenster;
         }
 
         /// <summary>
@@ -53,30 +53,6 @@ namespace apm.Forms
             pn_form.Tag = form;
             form.BringToFront();
             form.Show();
-        }
-
-
-        /// <summary>
-        /// Erstelle Testdaten fuer Fluege
-        /// </summary>
-        /// <returns>Liste, welche die Fluege beinhaltet</returns>
-        private List<Flug> GetFluege()
-        {
-            var list = new List<Flug>();
-
-            list.Add(new Flug(4234, "FRA", "JFK", 
-                new DateTime(2020, 09, 25, 10, 30, 00), new DateTime(2020, 09, 25, 19, 25, 00)));
-
-            list.Add(new Flug(1932, "TXL", "MUC",
-                new DateTime(2020, 09, 25, 11, 50, 00), new DateTime(2020, 09, 25, 12, 45, 00)));
-
-            list.Add(new Flug(4234, "DUS", "AUH",
-                new DateTime(2020, 09, 26, 06, 15, 00), new DateTime(2020, 09, 26, 20, 32, 00)));
-
-            list.Add(new Flug(4234, "LEJ", "CDG",
-                new DateTime(2020, 09, 28, 15, 40, 00), new DateTime(2020, 09, 28, 17, 02, 00)));
-
-            return list;
         }
 
 
@@ -134,9 +110,9 @@ namespace apm.Forms
                     ibtn_fluegeKunden.Text = "Suchergebnisse";
                     dgv_fluegeKunden.Columns["Site"].Visible = false;
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("{0} Exception caught.", e);
+                    Console.WriteLine("{0} Exception caught.", ex);
                 }
             }
         }
@@ -219,7 +195,6 @@ namespace apm.Forms
         private void btn_auswaehlen_Click(object sender, EventArgs e)
         {
             SelectedRow = dgv_fluegeKunden.Rows[dgv_fluegeKunden.CurrentCell.RowIndex];
-            Console.WriteLine(this.Name);
             if (ibtn_fluegeKunden.Text == "Suchergebnisse")
             {
                 if (_nextForm == "KundenAnzeigen")

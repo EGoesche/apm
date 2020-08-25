@@ -18,25 +18,67 @@ namespace apm
     {
         private IconButton _currentButton;
         private Form _currentForm;
-        List<Kunde> Kunden = new List<Kunde>();
+        private List<Kunde> _kunden = new List<Kunde>();
+        private List<Flug> _fluege = new List<Flug>();
 
-        public List<Kunde> GetKunden()
-        {
-            return Kunden;
-        }
 
-        public void SetKunden(List<Kunde> kundenliste)
-        {
-            Kunden = kundenliste;
-        }
-
+        /// <summary>
+        /// Konstruktor Startfenster.
+        /// Generiert testdaten und zeigt ersten Menuepunkt.
+        /// </summary>
         public Startfenster()
         {
             InitializeComponent();
             GeneriereKunden();
+            GeneriereFluege();
             ZeigeForm(new KundenHinzufuegen());
         }
 
+
+        /// <summary>
+        /// Liefert die Kundenliste.
+        /// </summary>
+        /// <returns>Kundenliste</returns>
+        public List<Kunde> GetKunden()
+        {
+            return _kunden;
+        }
+
+
+        /// <summary>
+        /// Ersetzt die Kundenliste durch die uebergebene Liste.
+        /// </summary>
+        /// <param name="kundenliste">Neue Kundenliste</param>
+        public void SetKunden(List<Kunde> kundenliste)
+        {
+            _kunden = kundenliste;
+        }
+
+
+        /// <summary>
+        /// Liefert die Flugliste.
+        /// </summary>
+        /// <returns>Flugliste</returns>
+        public List<Flug> GetFluege()
+        {
+            return _fluege;
+        }
+
+
+        /// <summary>
+        /// Ersetzt die Flugliste durch die uebergebene Liste.
+        /// </summary>
+        /// <param name="flugliste">Neue Flugliste</param>
+        public void SetFluege(List<Flug> flugliste)
+        {
+            _fluege = flugliste;
+        }
+
+
+        /// <summary>
+        /// Schliesst die aktuelle Form und oeffnet die uebergebene Form.
+        /// </summary>
+        /// <param name="form">Anzuzeigende Form</param>
         private void ZeigeForm(Form form)
         {
             if(_currentForm != null)
@@ -90,12 +132,13 @@ namespace apm
             }
         }
 
+
         /// <summary>
-        /// Erstellt einen Kundenstamm und fuegt Kunden hinzu fuer Testzwecke.
+        /// Erstellt einen Kundenstamm und fuegt Kunden hinzu fuer Testzwecke. Die erzeugen Daten werden in die 
+        /// Kundenliste geschrieben.
         /// </summary>
         private void GeneriereKunden()
         {
-            
             Kundenstamm ksLufthansa = new Kundenstamm("Lufthansa");
             try
             {
@@ -121,10 +164,29 @@ namespace apm
 
             while (denum.MoveNext())
             {
-                Kunden.Add((Kunde)denum.Current);
+                _kunden.Add((Kunde)denum.Current);
             }
         }
 
+
+        /// <summary>
+        /// Erstellt Fluege fuer Testzwecke und fuegt sie der Flugliste hinzu.
+        /// </summary>
+        private void GeneriereFluege()
+        {
+            _fluege.Add(new Flug(4234, "FRA", "JFK",
+                    new DateTime(2020, 09, 25, 10, 30, 00), new DateTime(2020, 09, 25, 19, 25, 00)));
+
+            _fluege.Add(new Flug(1932, "TXL", "MUC",
+                new DateTime(2020, 09, 25, 11, 50, 00), new DateTime(2020, 09, 25, 12, 45, 00)));
+
+            _fluege.Add(new Flug(4234, "DUS", "AUH",
+                new DateTime(2020, 09, 26, 06, 15, 00), new DateTime(2020, 09, 26, 20, 32, 00)));
+
+            _fluege.Add(new Flug(4234, "LEJ", "CDG",
+                new DateTime(2020, 09, 28, 15, 40, 00), new DateTime(2020, 09, 28, 17, 02, 00)));
+        }
+        
 
         private void btn_hinzufuegen_Click(object sender, EventArgs e)
         {

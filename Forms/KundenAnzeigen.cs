@@ -13,32 +13,43 @@ namespace apm.Forms
     public partial class KundenAnzeigen : Form
     {
         public List<Kunde> Kunden { get; set; }
-        private KundenSuchen prevForm = null;
-        private Startfenster mainForm = null;
+        private KundenSuchen _prevForm = null;
+        private Startfenster _mainForm = null;
 
+
+        /// <summary>
+        /// Standard-Konstruktor KundenAnzeigen
+        /// </summary>
         public KundenAnzeigen()
         {
             InitializeComponent();
         }
 
-        public KundenAnzeigen(Form main, Form callingForm)
+
+        /// <summary>
+        /// Konstruktor KundenAnzeigen.
+        /// </summary>
+        /// <param name="startFenster"></param>
+        /// <param name="vorherigesFenster"></param>
+        public KundenAnzeigen(Form startFenster, Form vorherigesFenster)
         {
-            prevForm = callingForm as KundenSuchen;
-            mainForm = main as Startfenster;
+            _prevForm = vorherigesFenster as KundenSuchen;
+            _mainForm = startFenster as Startfenster;
             InitializeComponent();
         }
 
+
         /// <summary>
-        /// Beschafft die Kundenliste von der Form KundenSuchen, sucht in dieser Liste
-        /// nach dem, Kunden (anhand der Kundennummer), welcher ausgewaehlt wurde  und
+        /// Beschafft die Kundenliste vom Startfenster, sucht in dieser Liste
+        /// nach dem, Kunden (anhand der Kundennummer), welcher ausgewaehlt wurde und
         /// fuellt dessen Werte in das Formular.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void KundenAnzeigen_Load(object sender, EventArgs e)
         {
-            Kunden = mainForm.GetKunden();
-            int index = Kunden.FindIndex(a => a.Kundennummer == int.Parse(prevForm.SelectedRow.Cells[0].Value.ToString()));
+            Kunden = _mainForm.GetKunden();
+            int index = Kunden.FindIndex(a => a.Kundennummer == int.Parse(_prevForm.SelectedRow.Cells[0].Value.ToString()));
             tb_kundennummer.Text = Kunden[index].Kundennummer.ToString();
             tb_vorname.Text = Kunden[index].Vorname.ToString();
             tb_nachname.Text = Kunden[index].Nachname.ToString();

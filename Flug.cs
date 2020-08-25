@@ -9,7 +9,7 @@ namespace apm
     /// <summary>
     /// Flug.
     /// </summary>
-    class Flug
+    public class Flug
     {
         public int Flugnummer { get; set; }
         public string StartFlughafenCode { get; set; }
