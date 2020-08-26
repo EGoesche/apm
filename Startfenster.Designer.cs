@@ -414,7 +414,6 @@
             // 
             this.pb_Logo.BackColor = System.Drawing.Color.Transparent;
             this.pb_Logo.Image = global::apm.Properties.Resources.apm;
-            this.pb_Logo.InitialImage = global::apm.Properties.Resources.Platzhalter;
             this.pb_Logo.Location = new System.Drawing.Point(18, 11);
             this.pb_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.pb_Logo.Name = "pb_Logo";
