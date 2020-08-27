@@ -15,7 +15,7 @@ namespace apm
     {
         private ISite _curSitznummerSite;
         public event EventHandler Disposed;
-        public int Sitznummer { get; set; }
+        public string Sitznummer { get; set; }
         public string Befoerderungsklasse { get; set; }
 
 
@@ -24,7 +24,7 @@ namespace apm
         /// </summary>
         /// <param name="sitznummer">Nummer, ueber welche der Sitzplatz eindeutig identifizierbar ist</param>
         /// <param name="befoerderungsklasse">Befoerderungsklasse, in welcher der Sitzplatz steht</param>
-        public Sitzplatz(int sitznummer, string befoerderungsklasse)
+        public Sitzplatz(string sitznummer, string befoerderungsklasse)
         {
             this.Sitznummer = sitznummer;
             this.Befoerderungsklasse = befoerderungsklasse;

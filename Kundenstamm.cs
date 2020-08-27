@@ -12,7 +12,7 @@ namespace apm
     /// Der Kundenstamm ist die Containerklasse, welche die Kunden der 
     /// verschiedenen Fluggesellschaften beinhaltet.
     /// </summary>
-    class Kundenstamm : IDisposable, IContainer
+    public class Kundenstamm : IDisposable, IContainer
     {
         private ArrayList _kundenList;
         public string Fluggesellschaft { get; set; }

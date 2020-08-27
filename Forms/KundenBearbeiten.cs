@@ -140,7 +140,7 @@ namespace apm.Forms
                 Kunden[_kundenIndex].Hausnummer = tb_hausnummer.Text;
                 if (tb_telefonnummer.Text[0] == '+') // Evtl. + vor Telefonnummer wird entfernt
                     tb_telefonnummer.Text = tb_telefonnummer.Text.Remove(0, 1);
-                Kunden[_kundenIndex].Telefonnummer = int.Parse(tb_telefonnummer.Text);
+                Kunden[_kundenIndex].Telefonnummer = long.Parse(tb_telefonnummer.Text);
                 Kunden[_kundenIndex].EMailAdresse = tb_email.Text;
                 _mainForm.SetKunden(Kunden);
                 TimerLabel(lb_feedback, "Speichern erfolgreich!", Color.Green);

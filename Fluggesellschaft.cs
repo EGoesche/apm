@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 namespace apm
 {
     /// <summary>
-    /// Fluggesellschaften.
+    /// Fluggesellschaft.
     /// </summary>
-    class Fluggesellschaft
+    public class Fluggesellschaft
     {
 
         public string Bezeichnung { get; set; }
-        public int IataCode { get; set; }
+        public string IataCode { get; set; }
 
-        public Fluggesellschaft(int iataCode, string bezeichnung)
+        public Fluggesellschaft(string iataCode, string bezeichnung)
         {
             IataCode = iataCode;
             Bezeichnung = bezeichnung;

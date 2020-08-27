@@ -19,7 +19,7 @@ namespace apm
 
 
         /// <summary>
-        /// Konstruktor Flug
+        /// Standard-Konstruktor Flug
         /// </summary>
         /// <param name="flugnummer">Nummer, anhand ein Flug eindeutig identifiziert werden kann</param>
         public Flug(int flugnummer)
@@ -29,7 +29,7 @@ namespace apm
 
 
         /// <summary>
-        /// Konstruktor Flug
+        /// Erweiterter Konstruktor Flug
         /// </summary>
         /// <param name="flugnummer">Nummer, anhand ein Flug eindeutig identifiziert werden kann</param>
         /// <param name="startFlughafenCode">IATA-Code des Startflughafen</param>
@@ -43,7 +43,7 @@ namespace apm
 
 
         /// <summary>
-        /// Konstruktor Flug
+        /// Vollstaendiger Konstruktor Flug
         /// </summary>
         /// <param name="flugnummer">Nummer, anhand ein Flug eindeutig identifiziert werden kann</param>
         /// <param name="startFlughafenCode">IATA-Code des Startflughafen</param>
@@ -62,11 +62,14 @@ namespace apm
 
 
         /// <summary>
-        /// Liefert die Flugdauer eines Fluges.
+        /// Liefert die Flugdauer eines Fluges. Befindet sich der Start zeitlich gesehen 
+        /// nach der Landung, wird eine Exception ausgeloest.
         /// </summary>
         /// <returns>Zeitspanne des Fluges im Format DAYS.HOURS:MINUTES:SECOUNDS</returns>
         public TimeSpan GetFlugdauer()
         {
+            if (LandZeitpunkt.Subtract(StartZeitpunkt) < new TimeSpan(0))
+                throw new ArgumentException();
             return LandZeitpunkt.Subtract(StartZeitpunkt);
         }
     }
