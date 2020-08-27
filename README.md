@@ -12,7 +12,7 @@ Der Air Passenger Manager (APM) ist eine Verwaltungssoftware, welche es Mitarbei
 einer Fluggesellschaft ermöglichen soll, Passagiere eines Flugzeuges digital abzubilden. So soll das Programm alle relevanten Eckdaten der Fluggäste aufnehmen, verarbeiten und bei Bedarf auch wieder ausgeben können. Die Mitarbeiter sind so unter
 anderem in der Lage, Passagiere einzuchecken, sie einem Flug zuzuordnen, den aktuellen Status eines Passagiers abzufragen und falls nötig auch wieder aus einer Fluglinie
 zu entfernen.
-Hinweis: Hauptaugenmerk lag bei der Konzeption dieser Software. Die Implementation erfolgte nur zu einem kleinen Teil und ist nun hier öffentlich einsehbar. Diese Tatsache begründet das Fehlen vieler Funktionen.
+Hinweis: Dieses Projekt ist im Rahmen einer Belegarbeit entstanden. Hauptaugenmerk lag bei der Konzeption dieser Software. Die Implementation erfolgte nur zu einem kleinen Teil und ist nun hier öffentlich einsehbar. Diese Tatsache begründet das Fehlen vieler Funktionen.
 
 Übersicht
 ---------------------
