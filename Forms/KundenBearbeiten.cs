@@ -79,7 +79,7 @@ namespace apm.Forms
             label.Show();
             label.Text = text;
             label.ForeColor = schriftfarbe;
-            var t = new Timer();
+            Timer t = new Timer();
             t.Interval = 3000; // entspricht 3 Sekunden
             t.Tick += (s, d) =>
             {

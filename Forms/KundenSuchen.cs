@@ -68,7 +68,7 @@ namespace apm.Forms
         /// <returns>Liste von Kunden mit Uebereinstimmungen</returns>
         private List<Kunde> SuchKunde(List<Kunde> kundenliste, int kundennummer, string name, string adresse, string land)
         {
-            var uebereinstimmungen = new List<Kunde>();
+            List<Kunde> uebereinstimmungen = new List<Kunde>();
 
             uebereinstimmungen.Add(kundenliste.Find(x => x.Vorname.Contains(name)));
            
@@ -101,12 +101,11 @@ namespace apm.Forms
                 // eingegeben wurde.
                 try
                 {
-                    int userVal;
-                    if (int.TryParse(tb_kundennummer.Text, out userVal))
+                    if (int.TryParse(tb_kundennummer.Text, out int userVal))
                         dgv_fluegeKunden.DataSource = SuchKunde(Kunden, userVal, tb_name.Text, tb_adresse.Text, tb_land.Text);
                     else
                         dgv_fluegeKunden.DataSource = SuchKunde(Kunden, 0, tb_name.Text, tb_adresse.Text, tb_land.Text);
-                    
+
                     ibtn_fluegeKunden.Text = "Suchergebnisse";
                     dgv_fluegeKunden.Columns["Site"].Visible = false;
                 }
