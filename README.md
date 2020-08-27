@@ -2,7 +2,7 @@
 <p align="center">
     <img
       alt="APM"
-      src="https://github.com/EGoesche/apm/"
+      src="https://github.com/EGoesche/apm/blob/master/Resources/apm.png"
       width="300"
     />
 </p>
