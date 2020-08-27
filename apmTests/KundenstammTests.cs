@@ -11,7 +11,7 @@ namespace apmTests
         public void Kundenstamm_KonstruktorKorrekteEingabe_ErzeugtObjekt()
         {
             // Act
-            var kundenstamm = new Kundenstamm("Delta Airlines");
+            Kundenstamm kundenstamm = new Kundenstamm("Delta Airlines");
 
             // Assert
             Assert.AreEqual("Delta Airlines", kundenstamm.Fluggesellschaft);
@@ -22,8 +22,8 @@ namespace apmTests
         public void Add_KorrekteEingabe_FuegtKundeHinzu()
         {
             // Arrange
-            var kundenstamm = new Kundenstamm("Delta Airlines");
-            var kunde = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 0157621823, "i.huefte@mallorca.es",
+            Kundenstamm kundenstamm = new Kundenstamm("Delta Airlines");
+            Kunde kunde = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 0157621823, "i.huefte@mallorca.es",
                     "deutsch", "Am Schwanenteich", "8", 09648, "Mittweida", "Deutschland");
 
             // Act
@@ -36,10 +36,10 @@ namespace apmTests
         public void Add_Duplikate_LiefertException()
         {
             // Arrange
-            var kundenstamm = new Kundenstamm("Delta Airlines");
-            var kunde1 = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 0157621823, "i.huefte@mallorca.es",
+            Kundenstamm kundenstamm = new Kundenstamm("Delta Airlines");
+            Kunde kunde1 = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 0157621823, "i.huefte@mallorca.es",
                     "deutsch", "Am Schwanenteich", "8", 09648, "Mittweida", "Deutschland");
-            var kunde2 = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 01263812333, "i.huefte@mallorca.es",
+            Kunde kunde2 = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 01263812333, "i.huefte@mallorca.es",
                     "deutsch", "Am Schwanenteich", "8", 09648, "Mittweida", "Deutschland");
 
             // Act

@@ -11,7 +11,7 @@ namespace apmTests
         public void Fluggesellschaft_KorrekteEingabe_ErzeugtObjekt()
         {
             // Act
-            var fluggesellschaft = new Fluggesellschaft("KL", "KLM Royal Dutch Airlines");
+            Fluggesellschaft fluggesellschaft = new Fluggesellschaft("KL", "KLM Royal Dutch Airlines");
 
             // Assert
             Assert.AreEqual("KL", fluggesellschaft.IataCode);

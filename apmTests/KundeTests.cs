@@ -11,7 +11,7 @@ namespace apmTests
         public void Kunde_KonstruktorKorrekteEingabe_ErzeugtObjekt()
         {
             // Act
-            var kunde = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 0157621823, "i.huefte@mallorca.es",
+            Kunde kunde = new Kunde(1273856, "unbekannt", "Ikke", "Hüftgold", new DateTime(1976, 09, 17), 'm', 0157621823, "i.huefte@mallorca.es",
                     "deutsch", "Am Schwanenteich", "8", 09648, "Mittweida", "Deutschland");
 
             // Assert
