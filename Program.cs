@@ -21,8 +21,6 @@ namespace apm
             Application.Run(new Startfenster());
 
 
-            Fluggesellschaft fg = new Fluggesellschaft(123, "Hallo");
-
         }
 
         

@@ -9,7 +9,7 @@ namespace apm
     /// <summary>
     /// Abstrakte Klasse eines Flugzeuges.
     /// </summary>
-    abstract class Flugzeug
+    public abstract class Flugzeug
     {
         public string ID { get; set; }
         public string Hersteller { get; set; }
