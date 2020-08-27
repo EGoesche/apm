@@ -55,6 +55,7 @@
     <Compile Include="KundenstammTests.cs" />
     <Compile Include="FluggesellschaftTests.cs" />
     <Compile Include="PassagierflugzeugTests.cs" />
+    <Compile Include="SitzplatzTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
