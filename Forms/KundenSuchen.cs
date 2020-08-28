@@ -66,17 +66,21 @@ namespace apm.Forms
         /// <param name="adresse">Gesuchte Adresse</param>
         /// <param name="land">Gesuchtes Land</param>
         /// <returns>Liste von Kunden mit Uebereinstimmungen</returns>
-        private List<Kunde> SuchKunde(List<Kunde> kundenliste, int kundennummer, string name, string adresse, string land)
+        private List<Kunde> SuchKunde(List<Kunde> kundenliste, int kundennummer, string vorname, string nachname, string wohnort)
         {
-            List<Kunde> uebereinstimmungen = new List<Kunde>();
 
-            uebereinstimmungen.Add(kundenliste.Find(x => x.Vorname.Contains(name)));
-           
-            if (kundenliste.Contains(kundenliste.Find(x => x.Nachname.Contains(name))))
-                uebereinstimmungen.Add(kundenliste.Find(x => x.Nachname.Contains(name)));
+            List<Kunde> gesucht = null;
+            List<Kunde> ergebnisse = new List<Kunde>();
+
+            if (vorname != "")
+                gesucht = (List<Kunde>)kundenliste.Where(item => item.Vorname.ToUpper().Contains(vorname.ToUpper())).ToList();
+            foreach (Kunde kunde in gesucht)
+            {
+                ergebnisse.Add(kunde);
+            }
 
 
-            return uebereinstimmungen;
+            return ergebnisse;
         }
 
 
@@ -88,7 +92,7 @@ namespace apm.Forms
         /// <returns></returns>
         private void WechselKundenFluege()
         {
-            if (tb_kundennummer.Text == "" && tb_name.Text == "" && tb_adresse.Text == "" && tb_land.Text == "")
+            if (tb_kundennummer.Text == "" && tb_vorname.Text == "" && tb_nachname.Text == "" && tb_wohnort.Text == "")
             {
                 dgv_fluegeKunden.DataSource = Fluege;
                 ibtn_fluegeKunden.Text = "Kommende Flüge";
@@ -96,18 +100,24 @@ namespace apm.Forms
             else
             {
                 dgv_fluegeKunden.DataSource = Kunden;
+                ibtn_fluegeKunden.Text = "Suchergebnisse";
+                
 
-                // Fange Fehler ab und ersetze die Kundennummer durch eine Null, falls keine
+                // Fange Fehler ab und ersetze die Kundennummer durch -1, falls keine
                 // eingegeben wurde.
                 try
                 {
                     if (int.TryParse(tb_kundennummer.Text, out int userVal))
-                        dgv_fluegeKunden.DataSource = SuchKunde(Kunden, userVal, tb_name.Text, tb_adresse.Text, tb_land.Text);
+                        dgv_fluegeKunden.DataSource = SuchKunde(Kunden, userVal, tb_vorname.Text, tb_nachname.Text, tb_wohnort.Text);
                     else
-                        dgv_fluegeKunden.DataSource = SuchKunde(Kunden, 0, tb_name.Text, tb_adresse.Text, tb_land.Text);
+                        dgv_fluegeKunden.DataSource = SuchKunde(Kunden, -1, tb_vorname.Text, tb_nachname.Text, tb_wohnort.Text);
 
-                    ibtn_fluegeKunden.Text = "Suchergebnisse";
                     dgv_fluegeKunden.Columns["Site"].Visible = false;
+                    dgv_fluegeKunden.Columns["Kundennummer"].DisplayIndex = 0;
+                    dgv_fluegeKunden.Columns["Nachname"].DisplayIndex = 1;
+                    dgv_fluegeKunden.Columns["Vorname"].DisplayIndex = 2;
+
+
                 }
                 catch (Exception ex)
                 {
@@ -136,9 +146,9 @@ namespace apm.Forms
         private void btn_zuruecksetzen_Click(object sender, EventArgs e)
         {
             tb_kundennummer.Text = "";
-            tb_name.Text = "";
-            tb_adresse.Text = "";
-            tb_land.Text = "";
+            tb_vorname.Text = "";
+            tb_nachname.Text = "";
+            tb_wohnort.Text = "";
         }
 
         /// <summary>
@@ -215,5 +225,6 @@ namespace apm.Forms
                 MessageBox.Show("Bevor Sie einen Kunden auswählen können, müssen Sie diesen über das " +
                     "Suchformular finden.", "Hinweis");
         }
+
     }
 }

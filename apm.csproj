@@ -108,10 +108,10 @@
     </Compile>
     <Compile Include="SitznummerSite.cs" />
     <Compile Include="Sitzplatz.cs" />
-    <Compile Include="Startfenster.cs">
+    <Compile Include="Forms\Startfenster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Startfenster.Designer.cs">
+    <Compile Include="Forms\Startfenster.Designer.cs">
       <DependentUpon>Startfenster.cs</DependentUpon>
     </Compile>
     <Compile Include="KundennummerSite.cs" />
@@ -149,7 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Startfenster.resx">
+    <EmbeddedResource Include="Forms\Startfenster.resx">
       <DependentUpon>Startfenster.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -60,7 +60,6 @@ namespace apm
         }
 
 
-
         /// <summary>
         /// Entfernt ein Kundenobjekt.
         /// </summary>
