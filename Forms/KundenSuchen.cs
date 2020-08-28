@@ -69,15 +69,46 @@ namespace apm.Forms
         private List<Kunde> SuchKunde(List<Kunde> kundenliste, int kundennummer, string vorname, string nachname, string wohnort)
         {
 
-            List<Kunde> gesucht = null;
+            List<Kunde> gesucht1 = null;
+            List<Kunde> gesucht2 = null;
             List<Kunde> ergebnisse = new List<Kunde>();
 
             if (vorname != "")
-                gesucht = (List<Kunde>)kundenliste.Where(item => item.Vorname.ToUpper().Contains(vorname.ToUpper())).ToList();
-            foreach (Kunde kunde in gesucht)
             {
-                ergebnisse.Add(kunde);
+                gesucht1 = (List<Kunde>)kundenliste.Where(item => item.Vorname.ToUpper().Contains(vorname.ToUpper())).ToList();
+
+                foreach (Kunde kunde in gesucht1)
+                {
+                    if (!ergebnisse.Where(item => item.Kundennummer.Equals(kunde.Kundennummer)).Any())
+                        ergebnisse.Add(kunde);
+                }
+
             }
+        
+
+
+            if (nachname != "")
+            {
+
+                if (ergebnisse.Count == 0)
+                {
+                    gesucht2 = (List<Kunde>)kundenliste.Where(item => item.Nachname.ToUpper().Contains(nachname.ToUpper())).ToList();
+
+                    foreach (Kunde kunde in gesucht2)
+                    {
+                        if (!ergebnisse.Where(item => item.Kundennummer.Equals(kunde.Kundennummer)).Any())
+                            ergebnisse.Add(kunde);
+                    }
+                }
+                else
+                {
+
+                    gesucht2 = (List<Kunde>)ergebnisse.Where(item => item.Nachname.ToUpper().Contains(nachname.ToUpper())).ToList();
+                    ergebnisse = gesucht2;
+                }
+            }
+
+
 
 
             return ergebnisse;
