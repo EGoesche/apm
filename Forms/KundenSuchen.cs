@@ -69,32 +69,16 @@ namespace apm.Forms
         private List<Kunde> SuchKunde(List<Kunde> kundenliste, int kundennummer, string vorname, string nachname, string wohnort)
         {
 
-            List<Kunde> gesucht1 = null;
-            List<Kunde> gesucht2 = null;
+            List<Kunde> gesucht = null;
             List<Kunde> ergebnisse = new List<Kunde>();
 
-            if (vorname != "")
+            if (kundennummer != -1)
             {
-                gesucht1 = (List<Kunde>)kundenliste.Where(item => item.Vorname.ToUpper().Contains(vorname.ToUpper())).ToList();
-
-                foreach (Kunde kunde in gesucht1)
-                {
-                    if (!ergebnisse.Where(item => item.Kundennummer.Equals(kunde.Kundennummer)).Any())
-                        ergebnisse.Add(kunde);
-                }
-
-            }
-        
-
-
-            if (nachname != "")
-            {
-
                 if (ergebnisse.Count == 0)
                 {
-                    gesucht2 = (List<Kunde>)kundenliste.Where(item => item.Nachname.ToUpper().Contains(nachname.ToUpper())).ToList();
+                    gesucht = kundenliste.Where(item => item.Kundennummer.ToString().StartsWith(kundennummer.ToString())).ToList();
 
-                    foreach (Kunde kunde in gesucht2)
+                    foreach (Kunde kunde in gesucht)
                     {
                         if (!ergebnisse.Where(item => item.Kundennummer.Equals(kunde.Kundennummer)).Any())
                             ergebnisse.Add(kunde);
@@ -103,12 +87,70 @@ namespace apm.Forms
                 else
                 {
 
-                    gesucht2 = (List<Kunde>)ergebnisse.Where(item => item.Nachname.ToUpper().Contains(nachname.ToUpper())).ToList();
-                    ergebnisse = gesucht2;
+                    gesucht = ergebnisse.Where(item => item.Kundennummer.ToString().StartsWith(kundennummer.ToString())).ToList();
+                    ergebnisse = gesucht;
                 }
             }
 
+            if (vorname != "")
+            {
+                if (ergebnisse.Count == 0)
+                {
+                    gesucht = kundenliste.Where(item => item.Vorname.ToUpper().Contains(vorname.ToUpper())).ToList();
 
+                    foreach (Kunde kunde in gesucht)
+                    {
+                        if (!ergebnisse.Where(item => item.Kundennummer.Equals(kunde.Kundennummer)).Any())
+                            ergebnisse.Add(kunde);
+                    }
+                }
+                else
+                {
+
+                    gesucht = ergebnisse.Where(item => item.Vorname.ToUpper().Contains(vorname.ToUpper())).ToList();
+                    ergebnisse = gesucht;
+                }
+            }
+
+            if (nachname != "")
+            {
+                if (ergebnisse.Count == 0)
+                {
+                    gesucht = kundenliste.Where(item => item.Nachname.ToUpper().Contains(nachname.ToUpper())).ToList();
+
+                    foreach (Kunde kunde in gesucht)
+                    {
+                        if (!ergebnisse.Where(item => item.Kundennummer.Equals(kunde.Kundennummer)).Any())
+                            ergebnisse.Add(kunde);
+                    }
+                }
+                else
+                {
+
+                    gesucht = ergebnisse.Where(item => item.Nachname.ToUpper().Contains(nachname.ToUpper())).ToList();
+                    ergebnisse = gesucht;
+                }
+            }
+
+            if (wohnort != "")
+            {
+                if (ergebnisse.Count == 0)
+                {
+                    gesucht = kundenliste.Where(item => item.Wohnort.ToUpper().Contains(wohnort.ToUpper())).ToList();
+
+                    foreach (Kunde kunde in gesucht)
+                    {
+                        if (!ergebnisse.Where(item => item.Kundennummer.Equals(kunde.Kundennummer)).Any())
+                            ergebnisse.Add(kunde);
+                    }
+                }
+                else
+                {
+
+                    gesucht = ergebnisse.Where(item => item.Wohnort.ToUpper().Contains(wohnort.ToUpper())).ToList();
+                    ergebnisse = gesucht;
+                }
+            }
 
 
             return ergebnisse;
@@ -147,6 +189,7 @@ namespace apm.Forms
                     dgv_fluegeKunden.Columns["Kundennummer"].DisplayIndex = 0;
                     dgv_fluegeKunden.Columns["Nachname"].DisplayIndex = 1;
                     dgv_fluegeKunden.Columns["Vorname"].DisplayIndex = 2;
+                    dgv_fluegeKunden.Columns["Wohnort"].DisplayIndex = 3;
 
 
                 }
