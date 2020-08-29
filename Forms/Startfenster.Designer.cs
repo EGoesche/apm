@@ -50,6 +50,8 @@
             this.ipb_seite = new FontAwesome.Sharp.IconPictureBox();
             this.pn_shadow = new System.Windows.Forms.Panel();
             this.pn_form = new System.Windows.Forms.Panel();
+            this.llb_sprache = new System.Windows.Forms.LinkLabel();
+            this.llb_anmelden = new System.Windows.Forms.LinkLabel();
             this.panelMenu.SuspendLayout();
             this.pn_CheckIn.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -115,6 +117,7 @@
             // 
             // btn_startManuell
             // 
+            this.btn_startManuell.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_startManuell.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_startManuell.FlatAppearance.BorderSize = 0;
             this.btn_startManuell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -164,6 +167,7 @@
             // 
             // btn_umbuchen
             // 
+            this.btn_umbuchen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_umbuchen.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_umbuchen.FlatAppearance.BorderSize = 0;
             this.btn_umbuchen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -189,6 +193,7 @@
             // 
             // btn_informationenAbrufen
             // 
+            this.btn_informationenAbrufen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_informationenAbrufen.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_informationenAbrufen.FlatAppearance.BorderSize = 0;
             this.btn_informationenAbrufen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -238,6 +243,7 @@
             // 
             // btn_entfernen
             // 
+            this.btn_entfernen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_entfernen.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_entfernen.FlatAppearance.BorderSize = 0;
             this.btn_entfernen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -263,6 +269,7 @@
             // 
             // btn_bearbeiten
             // 
+            this.btn_bearbeiten.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_bearbeiten.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_bearbeiten.FlatAppearance.BorderSize = 0;
             this.btn_bearbeiten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -288,6 +295,7 @@
             // 
             // btn_hinzufuegen
             // 
+            this.btn_hinzufuegen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_hinzufuegen.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_hinzufuegen.FlatAppearance.BorderSize = 0;
             this.btn_hinzufuegen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -370,6 +378,8 @@
             // pn_header
             // 
             this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.pn_header.Controls.Add(this.llb_anmelden);
+            this.pn_header.Controls.Add(this.llb_sprache);
             this.pn_header.Controls.Add(this.lb_formtitel);
             this.pn_header.Controls.Add(this.ipb_seite);
             this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -423,6 +433,38 @@
             this.pn_form.Size = new System.Drawing.Size(834, 515);
             this.pn_form.TabIndex = 3;
             // 
+            // llb_sprache
+            // 
+            this.llb_sprache.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
+            this.llb_sprache.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.llb_sprache.AutoSize = true;
+            this.llb_sprache.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_sprache.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.llb_sprache.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            this.llb_sprache.Location = new System.Drawing.Point(659, 12);
+            this.llb_sprache.Name = "llb_sprache";
+            this.llb_sprache.Size = new System.Drawing.Size(56, 16);
+            this.llb_sprache.TabIndex = 4;
+            this.llb_sprache.TabStop = true;
+            this.llb_sprache.Text = "Sprache";
+            this.llb_sprache.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            // 
+            // llb_anmelden
+            // 
+            this.llb_anmelden.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
+            this.llb_anmelden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.llb_anmelden.AutoSize = true;
+            this.llb_anmelden.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_anmelden.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.llb_anmelden.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            this.llb_anmelden.Location = new System.Drawing.Point(738, 12);
+            this.llb_anmelden.Name = "llb_anmelden";
+            this.llb_anmelden.Size = new System.Drawing.Size(71, 16);
+            this.llb_anmelden.TabIndex = 5;
+            this.llb_anmelden.TabStop = true;
+            this.llb_anmelden.Text = "Anmelden";
+            this.llb_anmelden.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            // 
             // Startfenster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,6 +514,8 @@
         private System.Windows.Forms.Label lb_formtitel;
         private System.Windows.Forms.Panel pn_shadow;
         private System.Windows.Forms.Panel pn_form;
+        private System.Windows.Forms.LinkLabel llb_sprache;
+        private System.Windows.Forms.LinkLabel llb_anmelden;
     }
 }
 
