@@ -16,7 +16,13 @@ namespace apm
         private ISite _curKundennummerSite;
         public event EventHandler Disposed;
         public int Kundennummer { get; set; }
-        public string Status { get; set; }
+        public enum Stati { unbekannt, Flug_gebucht, eingecheckt, eingecheckt_und_Gepäck_abgegeben, 
+            Sicherheitskontrolle_erfolgreich_durchlaufen, Sicherheitskontrolle_fehlgeschlagen, an_Bord,
+            Flug_storniert
+        };
+
+        public Stati Status { get;  set; }
+
         public Sitzplatz Sitz { get; set; }
 
 
@@ -38,8 +44,8 @@ namespace apm
         /// <param name="zip">ZIP-Code oder Postleizahl des Wohnortes des Kunden</param>
         /// <param name="wohnort">Wohnort des Kunden</param>
         /// <param name="land">Land, in welches der Kunde wohnhaft ist</param>
-        public Kunde(int kundennummer, string status, string vorname, string nachname, 
-            DateTime geburtsdatum, char geschlecht, long telefonnummer, 
+        public Kunde(int kundennummer, Stati status, string vorname, string nachname, 
+            DateTime geburtsdatum, Geschlechter geschlecht, long telefonnummer, 
             string emailAdresse, string staatsbuergerschaft, string strasse,
             string hausnummer, int zip, string wohnort, string land)
         {

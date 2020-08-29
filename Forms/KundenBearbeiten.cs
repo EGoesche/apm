@@ -134,8 +134,8 @@ namespace apm.Forms
                 Kunden[_kundenIndex].Zip = int.Parse(tb_zipCode.Text);
                 Kunden[_kundenIndex].Wohnort = tb_wohnort.Text;
                 Kunden[_kundenIndex].Land = tb_land.Text;
-                Kunden[_kundenIndex].Status = cb_status.SelectedItem.ToString(); // zusaetzliche Validierung muss erfolgen
-                Kunden[_kundenIndex].Geschlecht = cb_geschlecht.SelectedItem.ToString().ToCharArray()[0]; // ebenso
+                Kunden[_kundenIndex].Status = (Kunde.Stati)Enum.Parse(typeof(Kunde.Stati), cb_status.SelectedItem.ToString());
+                Kunden[_kundenIndex].Geschlecht = (Kunde.Geschlechter)Enum.Parse(typeof(Kunde.Geschlechter), cb_geschlecht.SelectedItem.ToString());
                 Kunden[_kundenIndex].Staatsbuergerschaft = tb_staatsbuergerschaft.Text;
                 Kunden[_kundenIndex].Hausnummer = tb_hausnummer.Text;
                 if (tb_telefonnummer.Text[0] == '+') // Evtl. + vor Telefonnummer wird entfernt

@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.pn_bearbeiten = new System.Windows.Forms.Panel();
+            this.lb_feedback = new System.Windows.Forms.Label();
             this.btn_speichern = new FontAwesome.Sharp.IconButton();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.lb_email = new System.Windows.Forms.Label();
             this.tb_telefonnummer = new System.Windows.Forms.TextBox();
             this.lb_telefonnummer = new System.Windows.Forms.Label();
             this.tb_staatsbuergerschaft = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.cb_geschlecht = new System.Windows.Forms.ComboBox();
             this.lb_geschlecht = new System.Windows.Forms.Label();
             this.tb_land = new System.Windows.Forms.TextBox();
@@ -57,8 +59,6 @@
             this.lb_status = new System.Windows.Forms.Label();
             this.tb_kundennummer = new System.Windows.Forms.TextBox();
             this.lb_kundennummer = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lb_feedback = new System.Windows.Forms.Label();
             this.pn_bearbeiten.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,17 @@
             this.pn_bearbeiten.Name = "pn_bearbeiten";
             this.pn_bearbeiten.Size = new System.Drawing.Size(709, 403);
             this.pn_bearbeiten.TabIndex = 0;
+            // 
+            // lb_feedback
+            // 
+            this.lb_feedback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_feedback.AutoSize = true;
+            this.lb_feedback.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_feedback.Location = new System.Drawing.Point(344, 314);
+            this.lb_feedback.Name = "lb_feedback";
+            this.lb_feedback.Size = new System.Drawing.Size(0, 16);
+            this.lb_feedback.TabIndex = 60;
+            this.lb_feedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_speichern
             // 
@@ -161,6 +172,16 @@
             this.tb_staatsbuergerschaft.Size = new System.Drawing.Size(182, 20);
             this.tb_staatsbuergerschaft.TabIndex = 54;
             this.tb_staatsbuergerschaft.TextChanged += new System.EventHandler(this.tb_staatsbuergerschaft_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(372, 101);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 16);
+            this.label12.TabIndex = 53;
+            this.label12.Text = "Staatsbürgerschaft*";
             // 
             // cb_geschlecht
             // 
@@ -335,13 +356,13 @@
             this.cb_status.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_status.FormattingEnabled = true;
             this.cb_status.Items.AddRange(new object[] {
-            "Flug gebucht",
+            "Flug_gebucht",
             "eingecheckt",
-            "eingecheckt und Gepäck abgegeben",
-            "Sicherheitskontrolle erfolgreich durchlaufen",
-            "Sicherheitskontrolle fehlgeschlagen",
-            "an Bord",
-            "Flug storniert",
+            "eingecheckt_und_Gepäck_abgegeben",
+            "Sicherheitskontrolle_erfolgreich_durchlaufen",
+            "Sicherheitskontrolle_fehlgeschlagen",
+            "an_Bord",
+            "Flug_storniert",
             "unbekannt"});
             this.cb_status.Location = new System.Drawing.Point(498, 29);
             this.cb_status.Name = "cb_status";
@@ -377,27 +398,6 @@
             this.lb_kundennummer.Size = new System.Drawing.Size(105, 16);
             this.lb_kundennummer.TabIndex = 31;
             this.lb_kundennummer.Text = "Kundennummer*";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(372, 101);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 16);
-            this.label12.TabIndex = 53;
-            this.label12.Text = "Staatsbürgerschaft*";
-            // 
-            // lb_feedback
-            // 
-            this.lb_feedback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_feedback.AutoSize = true;
-            this.lb_feedback.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_feedback.Location = new System.Drawing.Point(344, 314);
-            this.lb_feedback.Name = "lb_feedback";
-            this.lb_feedback.Size = new System.Drawing.Size(0, 16);
-            this.lb_feedback.TabIndex = 60;
-            this.lb_feedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // KundenBearbeiten
             // 

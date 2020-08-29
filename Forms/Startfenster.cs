@@ -142,15 +142,15 @@ namespace apm
             Kundenstamm ksLufthansa = new Kundenstamm("Lufthansa");
             try
             {
-                Kunde kunde1 = new Kunde(1273856, "unbekannt", "Hans", "Mueller", DateTime.Now, 'm', 0152017324, "h.mueller@test.de",
+                Kunde kunde1 = new Kunde(1273856, Kunde.Stati.Flug_gebucht, "Hans", "Mueller", DateTime.Now, Kunde.Geschlechter.m, 0152017324, "h.mueller@test.de",
                     "deutsch", "Am Schwanenteich", "8", 09648, "Mittweida", "Deutschland");
                 ksLufthansa.Add(kunde1, "1273856");
 
-                Kunde kunde2 = new Kunde(1936122, "Flug storniert", "Jan", "Schmidt", DateTime.Now, 'm', 037183624, "j.schm@try.com",
+                Kunde kunde2 = new Kunde(1936122, Kunde.Stati.unbekannt, "Jan", "Schmidt", DateTime.Now, Kunde.Geschlechter.m, 037183624, "j.schm@try.com",
                     "deutsch", "Gasse", "12b", 08213, "Stenn", "Deutschland");
                 ksLufthansa.Add(kunde2, "1936122");
 
-                Kunde kunde3 = new Kunde(1200836, "Flug gebucht", "Julia", "Meyer", DateTime.Now, 'w', 034821374, "julchen.mey@gmail.de",
+                Kunde kunde3 = new Kunde(1200836, Kunde.Stati.unbekannt, "Julia", "Meyer", DateTime.Now, Kunde.Geschlechter.w, 034821374, "julchen.mey@gmail.de",
                     "deutsch", "Am Tor", "27a", 01283, "Tübingen", "Deutschland");
                 ksLufthansa.Add(kunde3, "1200836");
             }

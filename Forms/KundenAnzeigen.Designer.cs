@@ -348,13 +348,13 @@
             this.cb_status.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_status.FormattingEnabled = true;
             this.cb_status.Items.AddRange(new object[] {
-            "Flug gebucht",
+            "Flug_gebucht",
             "eingecheckt",
-            "eingecheckt und Gepäck abgegeben",
-            "Sicherheitskontrolle erfolgreich durchlaufen",
-            "Sicherheitskontrolle fehlgeschlagen",
-            "an Bord",
-            "Flug storniert",
+            "eingecheckt_und_Gepäck_abgegeben",
+            "Sicherheitskontrolle_erfolgreich_durchlaufen",
+            "Sicherheitskontrolle_fehlgeschlagen",
+            "an_Bord",
+            "Flug_storniert",
             "unbekannt"});
             this.cb_status.Location = new System.Drawing.Point(473, 3);
             this.cb_status.Name = "cb_status";
