@@ -16,3 +16,8 @@ C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.KundenSuchen.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.Umbuchen.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.Forms.KundenAnzeigen.resources
 C:\Users\egoes\source\repos\apm\obj\Debug\apm.csprojAssemblyReference.cache
+C:\Users\egoes\source\repos\apm\bin\Debug\apm.exe.manifest
+C:\Users\egoes\source\repos\apm\bin\Debug\apm.application
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.TrustInfo.xml
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.exe.manifest
+C:\Users\egoes\source\repos\apm\obj\Debug\apm.application

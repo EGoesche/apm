@@ -277,27 +277,31 @@ namespace apm.Forms
         /// <param name="e"></param>
         private void btn_auswaehlen_Click(object sender, EventArgs e)
         {
-            SelectedRow = dgv_fluegeKunden.Rows[dgv_fluegeKunden.CurrentCell.RowIndex];
-            if (ibtn_fluegeKunden.Text == "Suchergebnisse")
+            if (dgv_fluegeKunden.Rows.Count != 0)
             {
-                if (_nextForm == "KundenAnzeigen")
+                SelectedRow = dgv_fluegeKunden.Rows[dgv_fluegeKunden.CurrentCell.RowIndex];
+                if (ibtn_fluegeKunden.Text == "Suchergebnisse")
                 {
-                    pn_anzeige.Visible = false;
-                    pn_suche.Visible = false;
-                    ZeigeForm(new KundenAnzeigen(mainForm, this));
+                    if (_nextForm == "KundenAnzeigen")
+                    {
+                        pn_anzeige.Visible = false;
+                        pn_suche.Visible = false;
+                        ZeigeForm(new KundenAnzeigen(mainForm, this));
+                    }
+                    else
+                    {
+                        pn_anzeige.Visible = false;
+                        pn_suche.Visible = false;
+                        ZeigeForm(new KundenBearbeiten(mainForm, this));
+                    }
                 }
                 else
-                {
-                    pn_anzeige.Visible = false;
-                    pn_suche.Visible = false;
-                    ZeigeForm(new KundenBearbeiten(mainForm, this));
-                }
+                    // Die Implementation der Funktion, ueber welche ein Kunde auch anhand der kommenden
+                    // Fluege ausgewaehlt werden kann, ist in diesem Beleg nicht vorgesehen.
+                    MessageBox.Show("Bevor Sie einen Kunden auswählen können, müssen Sie diesen über das " +
+                        "Suchformular finden.", "Hinweis");
             }
-            else
-                // Die Implementation der Funktion, ueber welche ein Kunde auch anhand der kommenden
-                // Fluege ausgewaehlt werden kann, ist in diesem Beleg nicht vorgesehen.
-                MessageBox.Show("Bevor Sie einen Kunden auswählen können, müssen Sie diesen über das " +
-                    "Suchformular finden.", "Hinweis");
+            
         }
 
     }
